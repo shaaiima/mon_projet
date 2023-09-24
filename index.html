@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssacceuil.css"> <!-- Lien vers votre fichier CSS personnalisé -->
+    <title>Accueil - Sagemcom</title>
+</head>
+<body>
+    <div id="content">
+    <div class="container">
+        <div class="form-container">
+            <div class="left-content">
+                <h2>Sagemcom</h2>
+                <p>Avec Sagemcom partagez et connectez-vous avec votre société.</p>
+            </div>
+        <img src="sag.png" alt="sagem">
+            <form id="login-form">
+            <input class="input-field" type="text" id="matricule" placeholder="Matricule" required>
+            <input class="input-field" type="password" id="motDePasse" placeholder="Mot de passe" required>
+            <div class="btn-container">
+                <button class="btn2" id="connect-button">Se connecter</button>
+                <button class="btn1" onclick="creerCompte()">Créer un compte</button>
+            </div>
+       
+         </form>
+   
+             </div>
+
+    <script>
+        function creerCompte() {
+            // Redirection vers la page inscription.html
+            window.location.href = "inscription.html";
+        }
+
+        document.getElementById("connect-button").addEventListener("click", seConnecter);
+
+        function seConnecter(e) {
+            e.preventDefault(); // Empêche le formulaire de se soumettre automatiquement
+
+            // Récupérer les valeurs saisies par l'utilisateur
+            var matricule = document.getElementById("matricule").value;
+            var motDePasse = document.getElementById("motDePasse").value;
+
+            // Vérifier si les champs ne sont pas vides
+            if (matricule.trim() === "" || motDePasse.trim() === "") {
+                alert("Veuillez saisir le matricule et le mot de passe.");
+            } else {
+                // Vérifier si l'utilisateur est déjà inscrit
+                var matriculeEnregistre = localStorage.getItem('matricule'); // Remplacez par la clé utilisée pour enregistrer le matricule
+                var motDePasseEnregistre = localStorage.getItem('motDePasse'); // Remplacez par la clé utilisée pour enregistrer le mot de passe
+
+                if (matriculeEnregistre === matricule && motDePasseEnregistre === motDePasse) {
+                    // L'utilisateur est connecté avec succès
+                    alert("Connexion réussie !");
+                    // Redirection vers la page login.html
+                    window.location.href = "login.html";
+                } else {
+                    // L'utilisateur n'est pas inscrit
+                    alert("Matricule ou Mot de passe incorrect !");
+                }
+            }
+        }
+     
+    </script>
+</body>
+</html>
+
+
+
+
+
+

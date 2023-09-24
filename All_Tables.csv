@@ -1,0 +1,315 @@
+Tableau,Contenu
+Tableau 1 (Test#1),",""and C/N
+ 
+tolerance update
+ 
+03
+ 
+16/11/2021
+ 
+GUILLEMOT Romain
+ 
+Add getpid command
+ 
+7.1.1
+ 
+I
+NTRODUCTION
+ 
+This document aims to 
+explain DTV DVB T/T2
+ 
+Front End test procedure for the M3
+77O
+ 
+mainboard.
+ 
+The functional test 
+uses the demodulator indicators according to the different stimuli at the input of the front
+-
+end.
+ 
+The tests 
+will be
+ 
+carried out
+ 
+over the VHF and UHF frequencies and for DVB
+-
+T and DVB
+-
+T2 modes
+ 
+and
+ 
+must
+ 
+be 
+performed on e
+ach 
+of the 
+available frontend
+ 
+unit
+s
+.
+ 
+After verifying that 
+CP & 
+CPK are good
+ 
+for 5000 products
+, the test coverage can be 
+limited
+ 
+to the mandatory tests
+ 
+highlighted in green
+.
+ 
+Important remark
+:
+ 
+The test 
+bench
+ 
+must be well controlled and calibrated to avoid signal propagation problems
+.
+ 
+7.1.2
+ 
+ 
+T
+/T2 
+TEST SIGNAL 
+CONDITIONS
+ 
+Terrestrial frequency band occupation:
+ 
+ 
+ 
+ 
+ 
+ 
+7MHz 
+DVB
+-
+T 
+test signal 
+characteristics
+ 
+Bandwidth 
+ 
+7MHz
+ 
+FFT
+ 
+8K
+ 
+Modulation
+ 
+64QAM
+ 
+Code rate
+ 
+3/4
+ 
+Guard interval
+ 
+1/4
+ 
+Input power
+ 
+-
+68
+dBm
+ 
+Carrier to Noise ratio
+ 
+18.3
+dB
+ 
+8MHz 
+DVB
+-
+T 
+test signal 
+characteristics
+ 
+Bandwidth 
+ 
+8MHz
+ 
+FFT
+ 
+8K
+ 
+Modulation
+ 
+64QAM
+ 
+Code rate
+ 
+2/3
+ 
+Guard interval
+ 
+1/8
+ 
+Input power
+ 
+-
+70
+dBm
+ 
+Carrier to Noise ratio
+ 
+17.1
+dB
+ 
+8MHz 
+DVB
+-
+T2 
+test signal 
+characteristics
+ 
+Bandwidth 
+ 
+8MHz
+ 
+FFT
+ 
+32KE
+ 
+Modulation
+ 
+256QAM
+ 
+Code rate
+ 
+3/5
+ 
+Guard interval
+ 
+1/128
+ 
+Pilot Pattern
+ 
+PP7
+ 
+Input power
+ 
+-
+70
+dBm
+ 
+Carrier to Noise ratio
+ 
+18.3
+dB
+ 
+FFT Extended
+ 
+Yes
+ 
+Constellation rotation
+ 
+Yes
+ 
+PAPR
+ 
+TR
+-
+PAPR
+ 
+SISO/MIMO
+ 
+SISO
+ 
+FEC Frame length
+ 
+64800
+ 
+Input Mode
+ 
+Mode A
+ 
+TFS
+ 
+No
+ 
+High efficiency mode
+ 
+HEM
+ 
+FEF
+ 
+Not used
+ 
+Auxiliary streams
+ 
+Not used
+ 
+ 
+ 
+198.5
+ 
+ 
+ 
+474
+ 
+ 
+ 
+Frequency (MHz)
+ 
+ 
+586
+ 
+ 
+ 
+ 
+ 
+3
+ 
+786
+ 
+ 
+ 
+ 
+ 
+3
+ 
+7MHz DVB
+-
+T
+ 
+ 
+ 
+3
+ 
+8MHz DVB
+-
+T2
+ 
+ 
+ 
+3
+ 
+8MHz DVB
+-
+T2
+ 
+ 
+ 
+3
+ 
+8MHz DVB
+-
+T
+ 
+ 
+ 
+3
+ 
+ """

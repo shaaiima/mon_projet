@@ -1,0 +1,320 @@
+
+
+
+[15:02:52:841]=======>Debut : Test Demarrage
+
+TT>
+[15:02:52:862]=======>Fin   : Test Demarrage 
+
+[15:02:52:866]=======>Debut : Test Briques Logicielles
+
+[15:02:52:867]=======>Fin   : Test Briques Logicielles 
+
+[15:02:52:868]=======>Debut : Configuration STB
+
+[15:02:52:869]=======>Fin   : Configuration STB
+
+[15:02:52:871]=======>Debut : Test  258  Mhz
+FE_ConnectCab 0 258000 6952 FE_DVB_C FE_QAM64
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] |                   Connexion 0                     |
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] parametres:
+[SAGEMTESTS]  Standard: FE_DVB_C
+[SAGEMTESTS]  Freq: 258000 kHz 
+[SAGEMTESTS]  SR: 6952 kBauds
+[SAGEMTESTS]  QAM: 64
+[SAGEMTESTS]  Sync CARRIER  = 
+[SAGEMTESTS]  CONNECTE
+[SAGEMTESTS] => FE_ConnectCab - PASSED <= 
+TT>FE_GetSignalInfos 0
+[SAGEMTESTS]  Sync CARRIER  = LOCKED
+[SAGEMTESTS]  Sync LOCK = LOCKED
+[SAGEMTESTS] Statistics FE:
+[SAGEMTESTS]  Bit Error Rate 			= NOT IMPLEMENTED
+[SAGEMTESTS]  Viterbi Bit Error Rate		= 355E-7
+[SAGEMTESTS]  Signal Strength 			= 81
+[SAGEMTESTS]  Signal Quality 			= 49 %
+[SAGEMTESTS]  Signal to Noise Ratio 		= 25 dB
+[SAGEMTESTS]  Number of uncorrected blocks 	= 0
+[SAGEMTESTS]  AGC 				= 81
+[SAGEMTESTS]  Frequency Offset 			= 2 kHz
+[SAGEMTESTS]  Symbol Rate Offset 		= 0 ppm
+[SAGEMTESTS]  Power in dBm 			= -67 dBm
+[SAGEMTESTS] => FE_GetSignalInfos - PASSED <= 
+TT>
+[15:02:53:655]=======>Debut : Test  386  Mhz
+FE_ConnectCab 0 386000 6952 FE_DVB_C FE_QAM256
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] |                   Connexion 0                     |
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] parametres:
+[SAGEMTESTS]  Standard: FE_DVB_C
+[SAGEMTESTS]  Freq: 386000 kHz 
+[SAGEMTESTS]  SR: 6952 kBauds
+[SAGEMTESTS]  QAM: 256
+[SAGEMTESTS]  Sync CARRIER  = 
+[SAGEMTESTS]  CONNECTE
+[SAGEMTESTS] => FE_ConnectCab - PASSED <= 
+TT>FE_GetSignalInfos 0
+[SAGEMTESTS]  Sync CARRIER  = LOCKED
+[SAGEMTESTS]  Sync LOCK = LOCKED
+[SAGEMTESTS] Statistics FE:
+[SAGEMTESTS]  Bit Error Rate 			= NOT IMPLEMENTED
+[SAGEMTESTS]  Viterbi Bit Error Rate		= 76E-7
+[SAGEMTESTS]  Signal Strength 			= 113
+[SAGEMTESTS]  Signal Quality 			= 49 %
+[SAGEMTESTS]  Signal to Noise Ratio 		= 32 dB
+[SAGEMTESTS]  Number of uncorrected blocks 	= 0
+[SAGEMTESTS]  AGC 				= 113
+[SAGEMTESTS]  Frequency Offset 			= 3 kHz
+[SAGEMTESTS]  Symbol Rate Offset 		= 0 ppm
+[SAGEMTESTS]  Power in dBm 			= -55 dBm
+[SAGEMTESTS] => FE_GetSignalInfos - PASSED <= 
+TT>
+[15:02:54:406]=======>Debut : Test  666  Mhz
+FE_ConnectCab 0 666000 6952 FE_DVB_C FE_QAM64
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] |                   Connexion 0                     |
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] parametres:
+[SAGEMTESTS]  Standard: FE_DVB_C
+[SAGEMTESTS]  Freq: 666000 kHz 
+[SAGEMTESTS]  SR: 6952 kBauds
+[SAGEMTESTS]  QAM: 64
+[SAGEMTESTS]  Sync CARRIER  = 
+[SAGEMTESTS]  CONNECTE
+[SAGEMTESTS] => FE_ConnectCab - PASSED <= 
+TT>FE_GetSignalInfos 0
+[SAGEMTESTS]  Sync CARRIER  = LOCKED
+[SAGEMTESTS]  Sync LOCK = LOCKED
+[SAGEMTESTS] Statistics FE:
+[SAGEMTESTS]  Bit Error Rate 			= NOT IMPLEMENTED
+[SAGEMTESTS]  Viterbi Bit Error Rate		= 316E-7
+[SAGEMTESTS]  Signal Strength 			= 80
+[SAGEMTESTS]  Signal Quality 			= 49 %
+[SAGEMTESTS]  Signal to Noise Ratio 		= 25 dB
+[SAGEMTESTS]  Number of uncorrected blocks 	= 0
+[SAGEMTESTS]  AGC 				= 80
+[SAGEMTESTS]  Frequency Offset 			= 5 kHz
+[SAGEMTESTS]  Symbol Rate Offset 		= 0 ppm
+[SAGEMTESTS]  Power in dBm 			= -68 dBm
+[SAGEMTESTS] => FE_GetSignalInfos - PASSED <= 
+TT>
+[15:02:55:170]=======>Debut : Test  858  Mhz
+FE_ConnectCab 0 858000 6952 FE_DVB_C FE_QAM256
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] |                   Connexion 0                     |
+[SAGEMTESTS] +--------------------------------------------------+
+[SAGEMTESTS] parametres:
+[SAGEMTESTS]  Standard: FE_DVB_C
+[SAGEMTESTS]  Freq: 858000 kHz 
+[SAGEMTESTS]  SR: 6952 kBauds
+[SAGEMTESTS]  QAM: 256
+[SAGEMTESTS]  Sync CARRIER  = 
+[SAGEMTESTS]  CONNECTE
+[SAGEMTESTS] => FE_ConnectCab - PASSED <= 
+TT>FE_GetSignalInfos 0
+[SAGEMTESTS]  Sync CARRIER  = LOCKED
+[SAGEMTESTS]  Sync LOCK = LOCKED
+[SAGEMTESTS] Statistics FE:
+[SAGEMTESTS]  Bit Error Rate 			= NOT IMPLEMENTED
+[SAGEMTESTS]  Viterbi Bit Error Rate		= 132E-7
+[SAGEMTESTS]  Signal Strength 			= 107
+[SAGEMTESTS]  Signal Quality 			= 49 %
+[SAGEMTESTS]  Signal to Noise Ratio 		= 32 dB
+[SAGEMTESTS]  Number of uncorrected blocks 	= 0
+[SAGEMTESTS]  AGC 				= 107
+[SAGEMTESTS]  Frequency Offset 			= 7 kHz
+[SAGEMTESTS]  Symbol Rate Offset 		= 0 ppm
+[SAGEMTESTS]  Power in dBm 			= -58 dBm
+[SAGEMTESTS] => FE_GetSignalInfos - PASSED <= 
+TT>
+
+[15:02:55:924]FIN TEST CAB 
+
+
+[15:02:55:926]FIN TEST TER 
+
+
+
+Lecture des commandes TT utilisées ===========================================
+
+===> Glob_CdesTT.EcritureFabCieInd :
+Cde : "FLASH_Write"
+        ¦Pass : "PASSED"
+        ¦Fail  : "FAILED"
+===> Glob_CdesTT.DisplayDFab :
+Cde : "FLASH_Read CIE_SN CIE_INDICE CIE_CODE"
+        ¦Pass : "PASSED"
+        ¦Fail  : "FAILED"
+        ¦Mes  : "CIE_SN = %%\r"
+        ¦Mes  : "CIE_CODE = %%\r"
+        ¦Mes  : "CIE_INDICE = %%\r"
+===> Glob_CdesTT.Usb :
+Cde : "FT_USB_CheckDevices"
+        ¦Pass : "USB Check on Host 0  : new device detected"
+        ¦Pass : "USB Check on Host 1  : new device detected"
+===> Glob_CdesTT.FE_GetSignalInfosCAB1 :
+Cde : "FE_GetSignalInfos 0"
+        ¦Pass : "PASSED"
+        ¦Fail  : "ERROR"
+        ¦Mes  : "Viterbi Bit Error Rate		= %%E-7\r"
+        ¦Mes  : "Power in dBm 			= %% dBm\r"
+        ¦Mes  : "Signal to Noise Ratio 		= %% dB\r"
+        ¦Mes  : "Frequency Offset 			= %% kHz\r"
+        ¦Mes  : "Symbol Rate Offset 		= %% ppm\r"
+        ¦Mes  : "Number of uncorrected blocks 	= %%\r"
+===> Glob_CdesTT.RF_TestStart :
+Cde : "FT_RF4CE_GetNbPackets START_COUNT 100"
+        ¦Pass : "PASSED"
+        ¦Fail  : "FAILED"
+===> Glob_CdesTT.RF_TestResult :
+Cde : "FT_RF4CE_GetNbPackets FINISH_COUNT 100"
+        ¦Pass : "PASSED"
+        ¦Fail  : "FAILED"
+        ¦Mes  : "Number of Received Packets: %%\r"
+Cde : "FT_RF4CE_GetNbPackets FINISH_COUNT 100"
+        ¦Pass : "PASSED"
+        ¦Fail  : "FAILED"
+        ¦Mes  : "Number of Received Packets: %%\r"
+===> Glob_CdesTT.GetReceiverEdid :
+Cde : "FT_HDMI_ReceiverEdid"
+        ¦Pass : "PASSED"
+===> Glob_CdesTT.Gfx_Test_Hdmi :
+Cde : "FT_HDMI_MireTest DISABLE"
+        ¦Pass : "PASSED"
+Cde : "FT_HDMI_MireTest ENABLE"
+        ¦Pass : "PASSED"
+Cde : "setdisplay"
+        ¦Pass : "HDMI: connected"
+===> Glob_CdesTT.Temp_Chipset :
+Cde : "CPU_CheckTemperature 70"
+        ¦Pass : "PASSED"
+        ¦Mes  : "Current CPU temperature is %% degrees C"
+===> Glob_CdesTT.RecuperationTempsDemarrage :
+Cde : "date"
+        ¦Pass : "BCM7252>"
+===> Glob_CdesTT.FE_ConnectCABFreq1_Tuner1 :
+Cde : "FE_ConnectCab 0 258000 6952 FE_DVB_C FE_QAM64"
+        ¦Pass : "PASSED"
+===> Glob_CdesTT.FE_ConnectCABFreq2_Tuner1 :
+Cde : "FE_ConnectCab 0 386000 6952 FE_DVB_C FE_QAM256"
+        ¦Pass : "FE_ConnectCab - PASSED"
+===> Glob_CdesTT.FE_ConnectCABFreq3_Tuner1 :
+Cde : "FE_ConnectCab 0 666000 6952 FE_DVB_C FE_QAM64"
+        ¦Pass : "FE_ConnectCab - PASSED"
+===> Glob_CdesTT.FE_ConnectCABFreq4_Tuner1 :
+Cde : "FE_ConnectCab 0 858000 6952 FE_DVB_C FE_QAM256"
+        ¦Pass : "FE_ConnectCab - PASSED"
+
+END Lecture des commandes TT utilisées ====================================
+
+
+Affichage des paramètres utilisés ===========================================
+
+- Produit : 
+- Code CIE : '253978033'
+- Indice CIE : 'C01'
+- Prompt : 'TT>'
+- Tuners TER : 1, CAB : 1, SAT : 0, ISDBT : 0
+- conf_DEC_BFE_bFlagGravageDFab = 1,gravage du DFAB
+- conf_DEC_BFE_bFlagTestPassageInSitu = 0,Pas de contrôle du passage InSitu
+- conf_DEC_BFE_bFlagTestCanauxAdjacents = 0, pas de Test avec Canaux Adjacents
+- conf_DEC_BFE_bFlagDVB_C_AnnexeB = 0,Test DVB-C (classique) annexe A
+- conf_DEC_BFE_bFlagDesactiveTestLoopTCable = 0,Test LoopThrough en DVB-C actif
+- conf_DEC_GEN_bFlagChipsetSecurise  = 0,Le chipSet de la carte ne doit pas être sécurisé
+- conf_DEC_BFE_bFlagDVB_T2 = 0,Pas de Test DVB-T2
+- conf_DEC_BFE_bFlagChannelModelling = 0,Pas de Test avec Channel Modelling
+
+END Affichage des paramètres utilisés ===========================================
+
+		-----------------------------------------
+		-----------------------------------------
+		Configuration Dektec
+		Modulation : QAM64
+		Type       : CAB
+		Frequence  : 258
+		Niveau     : -65
+		AWGN       : 26
+
+		-----------------------------------------
+		-----------------------------------------
+		Configuration Dektec
+		Modulation : QAM256
+		Type       : CAB
+		Frequence  : 386
+		Niveau     : -55
+		AWGN       : 32
+
+		-----------------------------------------
+		-----------------------------------------
+		Configuration Dektec
+		Modulation : QAM64
+		Type       : CAB
+		Frequence  : 666
+		Niveau     : -65
+		AWGN       : 26
+
+		-----------------------------------------
+		-----------------------------------------
+		Configuration Dektec
+		Modulation : QAM256
+		Type       : CAB
+		Frequence  : 858
+		Niveau     : -55
+		AWGN       : 32
+
+
+********************************************************************************************************
+*                  Cdt TT                                       *                 Test Time            *
+********************************************************************************************************
+|FE_ConnectCab 0 258000 6952 FE_DVB_C FE_QAM64                                                                                                                                         ;483.9999675751               ms|
+|-------------------------------------------------------------------------------------------------------|
+|FE_GetSignalInfos 0                                                                                                                                                                   ;280.9998989105               ms|
+|-------------------------------------------------------------------------------------------------------|
+|FE_ConnectCab 0 386000 6952 FE_DVB_C FE_QAM256                                                                                                                                        ;453.9999961853               ms|
+|-------------------------------------------------------------------------------------------------------|
+|FE_GetSignalInfos 0                                                                                                                                                                   ;282.0000648499               ms|
+|-------------------------------------------------------------------------------------------------------|
+|FE_ConnectCab 0 666000 6952 FE_DVB_C FE_QAM64                                                                                                                                         ;470.0000286102               ms|
+|-------------------------------------------------------------------------------------------------------|
+|FE_GetSignalInfos 0                                                                                                                                                                   ;282.9999923706               ms|
+|-------------------------------------------------------------------------------------------------------|
+|FE_ConnectCab 0 858000 6952 FE_DVB_C FE_QAM256                                                                                                                                        ;453.9999961853               ms|
+|-------------------------------------------------------------------------------------------------------|
+|FE_GetSignalInfos 0                                                                                                                                                                   ;286.0000133514               ms|
+|-------------------------------------------------------------------------------------------------------|
+
+
+
+ MESURES BFE
+
+Ber_CAB_Freq1Tuner1 .10-7 50 355 2000  OK
+Ber_CAB_Freq2Tuner1 .10-7 50 76 2000  OK
+Ber_CAB_Freq3Tuner1 .10-7 50 316 2000  OK
+Ber_CAB_Freq4Tuner1 .10-7 50 132 2000  OK
+CN_CAB_Freq1Tuner1 dB 25 25 27  OK
+CN_CAB_Freq2Tuner1 dB 31 32 33  OK
+CN_CAB_Freq3Tuner1 dB 25 25 27  OK
+CN_CAB_Freq4Tuner1 dB 31 32 33  OK
+FR_CAB_Freq1Tuner1 MHz 258 258 258  OK
+FR_CAB_Freq2Tuner1 MHz 386 386 386  OK
+FR_CAB_Freq3Tuner1 MHz 666 666 666  OK
+FR_CAB_Freq4Tuner1 MHz 858 858 858  OK
+NCP_CAB_Freq1Tuner1  0 0 0  OK
+NCP_CAB_Freq2Tuner1  0 0 0  OK
+NCP_CAB_Freq3Tuner1  0 0 0  OK
+NCP_CAB_Freq4Tuner1  0 0 0  OK
+OD_CAB_Freq1Tuner1 ppm -50 0 50  OK
+OD_CAB_Freq2Tuner1 ppm -50 0 50  OK
+OD_CAB_Freq3Tuner1 ppm -50 0 50  OK
+OD_CAB_Freq4Tuner1 ppm -50 0 50  OK
+OF_CAB_Freq1Tuner1 kHz -20 2 20  OK
+OF_CAB_Freq2Tuner1 kHz -20 3 20  OK
+OF_CAB_Freq3Tuner1 kHz -20 5 20  OK
+OF_CAB_Freq4Tuner1 kHz -20 7 20  OK
+PE_CAB_Freq1Tuner1 dBm -68 -67 -62  OK
+PE_CAB_Freq2Tuner1 dBm -58 -55 -52  OK
+PE_CAB_Freq3Tuner1 dBm -68 -68 -62  OK
+PE_CAB_Freq4Tuner1 dBm -58 -58 -52  OK

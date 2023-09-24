@@ -1,0 +1,220 @@
+
+[15:02:52:381]=======>attente demarrage 
+
+[15:02:52:522]=======>deamarrage OK
+
+[15:02:52:595]=======>Debut init 
+
+==========> Initialisation du décodeur
+		ifconfig eth0 up
+		TT>		ifconfig eth0 up
+		TT>		ifconfig eth0 199.99.99.161
+		TT>		sed -i 's/10/60/g' ./SagemTests_rep/FT_SPDIF_AUDIO_TEST
+		TT>
+[15:02:52:699]=======>Fin init 
+
+[15:02:52:760]==========> Test Décodeur <==========
+
+[15:02:52:829]==========> Connexion Réussie <==========
+
+[15:02:52:831]==========> Cmd Video Play: OK
+
+[15:02:52:833]==========> Cmd Audio Play: OK
+
+[15:02:56:070]==========> Début de l'analyse HDMI
+
+[15:2:56:75]==========> Activation HDMI
+		FT_HDMI_MireTest DISABLE
+		[SAGEMTESTS] => HDMI_MireTest - PASSED <= 
+		TT>		FT_HDMI_MireTest ENABLE
+		display state:
+		  format: 1080p  dynrng(user): default
+		  HDMI: connected, powered, preferred format 1080p, hdcp none auto -> Unauthenticated
+		  outputs: hdmi
+		  color 0,0,0,0
+		  backgroundColor 0
+		[SAGEMTESTS] => HDMI_MireTest - PASSED <= 
+		TT>		setdisplay
+		display state:
+		  format: 1080p  dynrng(user): default
+		  HDMI: connected, powered, preferred format 1080p, hdcp none auto -> Unauthenticated
+		  outputs: hdmi
+		  color 0,0,0,0
+		  backgroundColor 0
+		TT>
+[15:02:57:946]Debut ANALYSE HDMI
+
+Analyse HDMI : OK
+                     TAG_INVALID: 0
+                     TAG_SUBCH_1_ERRORS: 0
+                     TAG_SUBCH_2_ERRORS: 0
+                     TAG_SUBCH_3_ERRORS: 0
+                     TAG_PIXEL_ERRORS: 0
+                     TAG_SUBCH_1_BIT_ERRORS: 0
+                     TAG_SUBCH_2_BIT_ERRORS: 0
+                     TAG_SUBCH_3_BIT_ERRORS: 0
+                     TAG_END_LIST: 0
+=========> test HDMI OK
+
+[15:03:00:955]Fin ANALYSE HDMI
+
+
+[15:3:0:957]==========> Commande TT HDMI_ReceiverEdid
+		FT_HDMI_ReceiverEdid
+		[SAGEMTESTS] Receiver Name :UFG-06 HDDP
+		[SAGEMTESTS] Manufture Week 25, Year 2011
+		[SAGEMTESTS] HDMI EDID Ver.1 Rev.3 
+		[SAGEMTESTS] Supported Video Formats : 480p,576p,1080i,1080p24,1080p25,1080p30,1080p50,1080p,720p,720p50,vga,720p3D,
+		[SAGEMTESTS] Supported Audio Formats : ac3,ac3plus,dts,dtshd,pcm,mlp,
+		[SAGEMTESTS] Audio Sampling Rate : 192000
+		[SAGEMTESTS] Audio Channel Count : 0
+		
+		[SAGEMTESTS] Receiver number of edid bolcks : 2 
+		[SAGEMTESTS] HDMI EDID block 0
+			00 ff ff ff ff ff ff 00 54 c7 36 60 01 00 00 00 
+			19 15 01 03 80 00 00 78 0a 0d c9 a0 57 47 98 27 
+			12 48 4c ff ef 80 b3 00 a9 40 81 40 95 19 81 99 
+			61 59 45 59 31 59 02 3a 80 18 71 38 2d 40 58 2c 
+			45 00 c4 8e 21 00 00 7f 28 3c 80 a0 70 b0 23 40 
+			30 20 36 00 13 4c 21 00 00 18 00 00 00 fc 00 55 
+			46 47 2d 30 36 20 48 44 44 50 0a 20 00 00 00 fd 
+			00 0a f0 0a 64 11 00 0a 20 20 20 20 20 20 01 4c 
+		[SAGEMTESTS] HDMI EDID block 1
+			02 03 4d 74 4d 90 03 04 02 11 12 13 1f 20 1f 22 
+			21 05 3b 09 7f 07 0d 7f 07 0f 7f 07 61 7f 00 65 
+			7f 00 67 7f 00 59 7f 00 5d 7f 00 5f 7f 00 2c 15 
+			06 55 3d 1f c0 57 06 00 4d 02 00 83 7f 00 00 6d 
+			03 0c 00 10 00 b8 2d 20 a0 02 01 41 00 01 1d 00 
+			72 51 d0 1e 20 6e 28 55 00 c4 8e 21 00 00 1e 01 
+			1d 80 18 71 1c 16 20 58 2c 25 00 c4 8e 21 00 00 
+			9e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d1 
+		[SAGEMTESTS] => FT_HDMI_ReceiverEdid - PASSED <= 
+		TT>
+
+[15:03:01:121] DEBUT HDMI CEC
+
+		FT_HDMI_CEC
+		[SAGEMTESTS] Wait for logical address before starting test...
+		[SAGEMTESTS] BCM7216 Logical Address <3> Acquired
+		[SAGEMTESTS] BCM7216 Physical Address: 1.0.0.0
+		[SAGEMTESTS] CEC Device Ready!
+		[SAGEMTESTS] => FT_HDMI_CEC - PASSED <= 
+		TT>
+
+[15:03:05:413]  FIN HDMI CE
+
+
+[15:03:05:568]==========> Début de l'analyse Video
+
+[15:03:05:661]==========> Début de l'analyse Audio
+
+[15:03:05:664]==========> Mesures RCA OPTIQUE
+		./SagemTests_rep/FT_SPDIF_AUDIO_TEST 60&
+		TT>		sleep 2
+		TT>
+
+[15:03:12:864] Test Pid Vid
+
+		FE_ConnectCab 0 386000 6952 FE_DVB_C FE_QAM256
+		[SAGEMTESTS] +--------------------------------------------------+
+		[SAGEMTESTS] |                   Connexion 0                     |
+		[SAGEMTESTS] +--------------------------------------------------+
+		[SAGEMTESTS] parametres:
+		[SAGEMTESTS]  Standard: FE_DVB_C
+		[SAGEMTESTS]  Freq: 386000 kHz 
+		[SAGEMTESTS]  SR: 6952 kBauds
+		[SAGEMTESTS]  QAM: 256
+		[SAGEMTESTS]  Sync CARRIER  = 
+		[SAGEMTESTS]  CONNECTE
+		[SAGEMTESTS] => FE_ConnectCab - PASSED <= 
+		TT>		FE_GetPid
+		+---------------------------------+
+		|      Get PID information        |
+		+---------------------------------+
+		Source: Mtsif
+		Program number : [4130]
+			video: pid=4130 codec=mp2 (2)
+			audio: pid=4131 codec=mp (1)
+			pcr  : pid=4130
+			for decode : FE_VidAudDecode 0 4130 mp2 4131 mp 4130
+		Program number : [4132]
+			video: pid=4132 codec=mp2 (2)
+			audio: pid=4133 codec=mp (1)
+			pcr  : pid=4132
+			for decode : FE_VidAudDecode 0 4132 mp2 4133 mp 4132
+		Program number : [5130]
+			video: pid=5130 codec=h264 (5)
+			audio: pid=5131 codec=mp (1)
+			pcr  : pid=5130
+			for decode : FE_VidAudDecode 0 5130 h264 5131 mp 5130
+		Program number : [5132]
+			video: pid=5132 codec=h264 (5)
+			audio: pid=5133 codec=mp (1)
+			pcr  : pid=5132
+			for decode : FE_VidAudDecode 0 5132 h264 5133 mp 5132
+		OK
+		[SAGEMTESTS] => FE_GetPid - PASSED <= 
+		TT>
+[15:03:14:565]==========> verification des briques logicielles
+		SagemTests_GetVersions
+		[SAGEMTESTS] SagemTests compiled : Jan 17 2023 at 14:41:55 
+		[SAGEMTESTS] DEFCONFIG = sc_bcm_m377_72127B0_NC_22_PYUR_functional_defconfig
+		[SAGEMTESTS] BUILDROOT_VERSION = 4eb5edb23713df350819e94e23f12d7191554b34
+		[SAGEMTESTS] BRANCH = HEAD
+		[SAGEMTESTS] BCHP_CHIP = 7216
+		[SAGEMTESTS] PRODUCT = M377_PYUR
+		[SAGEMTESTS] PROFILE = USINE
+		[SAGEMTESTS] PIC Version: Not Applicable
+		[SAGEMTESTS] RF4CE Firmware Version: Not Applicable
+		[SAGEMTESTS] SagemTest Version : TT_C_M377_PYUR
+		[SAGEMTESTS] => SagemTests_GetVersions - PASSED <= 
+		TT>
+[15:03:14:763]==========> Test ethernet
+		ping -c 1 199.99.99.160 -w4
+		PING 199.99.99.160 (199.99.99.160): 56 data bytes
+		64 bytes from 199.99.99.160: seq=0 ttl=128 time=0.352 ms
+		
+		--- 199.99.99.160 ping statistics ---
+		1 packets transmitted, 1 packets received, 0% packet loss
+		round-trip min/avg/max = 0.352/0.352/0.352 ms
+		TT>Nombre de Ping  : 10
+		ping -s 65500 -c 1 199.99.99.160 -w4
+		PING 199.99.99.160 (199.99.99.160): 65500 data bytes
+		65508 bytes from 199.99.99.160: seq=0 ttl=128 time=1.847 ms
+		
+		--- 199.99.99.160 ping statistics ---
+		1 packets transmitted, 1 packets received, 0% packet loss
+		round-trip min/avg/max = 1.847/1.847/1.847 ms
+		TT>		ifconfig eth0 down
+		TT>
+=======>Debut Test Debit USB 
+		hdparm -t /dev/sda1
+		
+		/dev/sda1:
+		Timing buffered disk reads:   88 MB in 3.02 seconds = 29761 kB/s
+		TT>
+
+=======>Fin  Test Debit USB
+
+
+[15:03:20:684]=======>Debut verification dfab 
+
+[15:03:20:686]=======>Fin verification dfab 
+
+Mesures:
+
+BAV_Ethernet_Ping_PC ms 0 1.7864 3  OK
+BriqLogicielles  1 0 1  OK
+DebitUSB_BAV kB/s 10000 29761 300000  OK
+HDMI  1 0 1  OK
+InitDec  1 0 1  OK
+OP1kFL Hz 995 1000.002619984 1005  OK
+OP1kFR Hz 995 1000.002606764 1005  OK
+OP1kLL dB -8 -7.239390635547 -6  OK
+OP1kLR dB -8 -7.190665920536 -6  OK
+OPSINL dB 54 74.02950895973 999  OK
+OPSINR dB 54 76.44990923048 999  OK
+OPTHDL % 0.001 0.01517616024058 0.1  OK
+OPTHDR % 0.001 0.008990173378038 0.1  OK
+TEST_ACCESSOIRES  1 0 1  MesureNonFaite
+ 

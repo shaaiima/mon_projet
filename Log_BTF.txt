@@ -1,0 +1,1432 @@
+[11:11:00:631] ===================> START OF TEST <======================================================
+
+[11:11:00:631] ######## STB CONFIGURATION #######################
+[11:11:00:631] conf_DEC_BTF_sVersion                            : S14004AA48
+               conf_DEC_GEN_sFamilleChipset                     : H205
+               conf_DEC_GEN_iVitessePortComStb                  : 115200
+               conf_DEC_GEN_sTypeTT             ccccc                : Linux
+               conf_DEC_GEN_sPrompt                             : TT>
+               conf_DEC_GEN_bFlagControlFlux                    : 1
+               conf_DEC_BTF_bFlagPreAlimentation                : 1
+               conf_DEC_BTF_sCdeTTStbFin                        : [SWITCH_TO_BP3{TimeOut:10}{Pass:PASSED}][sync{Pass:TT>}]
+               conf_DEC_BTF_sCdeTTStbInit                       : [FLASH_Read ALL{Pass:TT>}][SagemTests_GetVersions{TimeOut:5}{Pass:TT>}]
+               conf_DEC_BTF_bFlagDesactivLectureChipsetID       : 0
+               conf_DEC_GEN_sFullSalesType                      : KWAA
+               conf_DEC_GEN_sTermTech                           : TT_F_M377_CLARO
+               conf_DEC_BTF_bFlagServeurFTPInterneSTBActif      : 0
+               conf_DEC_BTF_sCdeTTDemarrageFtpStb               : [tcpsvd -vE 0.0.0.0 21 ftpd -w /tmp/ftp_directory &> /dev/null &{Pass:BCM7252>}][echo $?{Pass:0}]
+               conf_DEC_BTF_sConfigInterfaceResauParSlot        : ifconfig eth0 up && ifconfig gphy hw ether 00:AA:BB:CC:DD:10|ifconfig eth0 up && ifconfig gphy hw ether 00:AA:BB:CC:DD:11|ifconfig eth0 up && ifconfig gphy hw ether 00:AA:BB:CC:DD:12
+               conf_DEC_BTF_sConfigAddressIPParSlot             : 190.170.10.10|190.170.10.11|10.25.14.13
+               conf_DEC_BTF_iNombrePatins                       : 0
+               conf_DEC_BTF_iNombreVis                          : 0
+               conf_DEC_BTF_iNombreBoutons                      : 2
+               conf_DEC_BTF_iTimeoutBouton                      : 20
+               conf_DEC_BTF_sCdeTTActivationBouton              : [FT_DetectSwitches ENABLE{Pass:PASSED}]
+               conf_DEC_BTF_sRetourBoutonAttendu                : [SAGEMTESTS] switch 116 released|[SAGEMTESTS] switch 148 released
+               conf_DEC_BTF_iNbreAppuiBoutons                   : 1
+               conf_DEC_BTF_sCdeTTTestEcran                     : [FT_FPOUT DISPLAY_PIXELS ALL{Pass:PASSED}{Fail:FAILED}]|[FT_FPOUT DISPLAY_PIXELS CLEAN{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_bFlagTestFlashNand                  : 1
+               conf_DEC_BTF_sCdeTTTestFlashNand                 : [NAND_Id{Pass:PASSED}{Fail:FAILED}{Manufacturer ID	: %}{Total Size		: %}]
+               conf_DEC_BTF_sIdFlashNand                        : 0x000090|0x000011|0x000045
+               conf_DEC_BTF_bFlagTestFlashNor                   : 0
+               conf_DEC_BTF_sCdeTTTestFlashNor                  : [NOR_Id{Pass:PASSED}{Fail:FAILED}{Chip ID		 = %}{Manufacturer ID	 = %}{Write Buffer Size	 = %}]
+               conf_DEC_BTF_sFlashNorDeviceId                   : 0x00169e|0x0016ba
+               conf_DEC_BTF_bFlagTestHdd                        : 0
+               conf_DEC_BTF_sCdeTTHddInfo                       : [dd if=/dev/zero  bs=1M count=16 | tr "\000" "\377" > /dev/mmcblk0gp0 && echo Return=$?{Pass: Return=0}][dd if=/dev/zero  bs=1M count=16 | tr "\000" "\377" > /dev/mmcblk0gp1 && echo Return=$?{Pass: Return=0}][dd if=/dev/zero  bs=1M count=16 | tr "\000" "\377" > /dev/mmcblk0gp3 && echo Return=$?{Pass: Return=0}][FLASH_Read ALL{Pass:BCM7252>}][SagemTests_GetVersions{TimeOut:5}{Pass:BCM7252>}]
+               conf_DEC_BTF_sHddModel                           : TOSHIBA MQ01ABD050VS
+               conf_DEC_BTF_bFlagVerifTransactionHdd            : 1
+               conf_DEC_BTF_sHddTransactions                    : CTL_ELSIL_OK
+               conf_DEC_BTF_bFlagTestLeds                       : 0
+               conf_DEC_BTF_sCdeTTDebutFinTestLeds              : [FT_LED DISABLE ALL{Pass:PASSED}]
+               conf_DEC_BTF_bFlagTestIr                         : 0
+               conf_DEC_BTF_sCdePicIrChoixMode                  : [PT3_OIR0_NEC 0{Pass:OK}{Fail:ERROR}]
+               conf_DEC_BTF_sCdeTTIrChoixMode                   : [FT_IR ENABLE{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTIrDisable                     : [FT_IR DISABLE {Pass:PASSED}]
+               conf_DEC_BTF_sTrameIrAttendue                    : [SAGEMTESTS] RC# 000b released
+               conf_DEC_BTF_sCdeTTRecupInfoStb                  : [dd if=/dev/mmcblk0 bs=4096 count=10496 skip=$((0x11C5F1)) of=/tmp/fsos_bin; truncate -s42164976 /tmp/fsos_bin;md5sum /tmp/fsos_bin{TimeOut:10}{Pass:49a7fa6cdefe714b81bd605432ba7e66}][FLASH_Read ALL{Pass:TT>}][SagemTests_GetVersions{TimeOut:5}{Pass:TT>}]
+               conf_DEC_BTF_bFlagTestSDCard                     : 0
+               conf_DEC_BTF_sCdeTTTestSDCard                    : [FT_SDCARD_GetInfos{TimeOut:10}{Pass:FT_SDCARD_GetInfos - PASSED}{[SAGEMTESTS] CID  :%}]
+               conf_DEC_BTF_bFlagPasVerifAbsenceSmrtCrd         : 1
+               conf_DEC_BTF_bFlagTestSmartCard                  : 0
+               conf_DEC_BTF_sCdeTTTestSmartCardEtape1           : [FT_SMARTCARD_FullTests{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_bFlagTestUsb                        : 1
+               conf_DEC_BTF_sCdeTTTestUsb                       : [FT_LED DISABLE ALL{TimeOut:4}{Pass:PASSED}][FT_LED ENABLE LED0{TimeOut:4}{Pass:PASSED}][FT_LED DISABLE ALL{TimeOut:4}{Pass:PASSED}][FT_LED ENABLE LED1{TimeOut:4}{Pass:PASSED}][FT_LED DISABLE ALL{TimeOut:4}{Pass:PASSED}][FT_LED ENABLE LED3{TimeOut:4}{Pass:PASSED}][FT_USB_CheckDevices{Pass:new device detected}]
+               conf_DEC_BTF_bFlagTestVentilateur                : 0
+               conf_DEC_BTF_bFlagVentilateurExpluseAir          : 0
+               conf_DEC_BTF_sCdeTTFanOff                        : [FT_FAN DISABLE{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_sCdeTTFanOn                         : [FT_FAN ENABLE{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_iTempsPauseVentilateur              : 2500|1500
+               conf_DEC_BTF_sPresenceRadiateurFormule           : 0.000000000001644314|-0.000000001495403398|0.000000475746922329|-0.000061828038877648|0.001354498507833440|0.408869281288502000|45.675224170435300000
+               conf_DEC_BTF_bFlagTestTemperatureChipset         : 1
+               conf_DEC_BTF_sCdeTTTemperatureChipset            : [FT_CPU_CheckTemperature 80{Pass:FT_CPU_CheckTemperature - PASSED}{Current CPU temperature is %}]
+               conf_DEC_BTF_bFlagPasVerifierLockFlash           : 1
+               conf_DEC_BFS_sHardwareId                         : 3750
+               conf_DEC_BFS_sCmdTTClesSansArgument              : [FUSE_GetStates_RAW 1 0x00000001 0x00000001{Pass:OK -  ACTIVATED}][FUSE_GetStates_RAW 7 0x00000001 0x00000001{Pass:OK -  ACTIVATED}]
+               conf_DEC_BFS_sCdeTTEcritureMac                   : FLASH_Write MAC_ADDRESS |[SAGEMTESTS] MAC_ADDRESS = |FLASH_Write MAC_ADDRESS1 |[SAGEMTESTS] MAC_ADDRESS1 = |FLASH_Write MAC_ADDRESS2 |[SAGEMTESTS] MAC_ADDRESS2 = 
+               conf_DEC_BFS_sCdeTTRelectureMac                  : FLASH_Read MAC_ADDRESS |[SAGEMTESTS] MAC_ADDRESS = |FLASH_Read MAC_ADDRESS1 |[SAGEMTESTS] MAC_ADDRESS1 = |FLASH_Read MAC_ADDRESS2 |[SAGEMTESTS] MAC_ADDRESS2 = 
+               conf_DEC_BFS_bFlagImpressionViaBdd               : 1
+               conf_DEC_BFS_sMasqueImpression                   : Eiq_const_377Vclaro
+               conf_DEC_BFS_bFlagSnClaro                        : 1
+               conf_DEC_BTF_iNombreLed                          : 4
+               conf_DEC_BTF_sSequenceCouleursTestLeds           : B|B|B|B
+               conf_DEC_BTF_bFlagTestLedsSequentiel             : 1
+               conf_DEC_BTF_sCdeTTActivationLed1                : [FT_LED ENABLE LED3{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTActivationLed2                : [FT_LED ENABLE LED2{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTActivationLed3                : [FT_LED ENABLE LED1{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTActivationLed4                : [FT_LED ENABLE LED0{Pass:PASSED}]
+               conf_DEC_BTF_iTailleFlashNandMin                 : 6
+               conf_DEC_BTF_bFlagTestBoutonMute                 : 1
+               conf_DEC_BTF_sCdeTTActivationBoutonMute          : [FT_AUDIO_TEST_MICS_LED 100{TimeOut:15}{Pass:Mics are not connected}]|[FT_AUDIO_TEST_MICS_LED 100{TimeOut:15}{Pass:Mics are connected}]
+               conf_DEC_BTF_bFlagTestBoutonMuteOFF              : 1
+               conf_DEC_BTF_bFlagChinpset_NAGRA                 : 1
+               conf_DEC_BTF_bFlagNewCHIPSET                     : 1
+               conf_DEC_BFS_bFlagSnClaroNewFormat               : 0
+               
+[11:11:00:631] adressesmac                               : 3
+               pk_nasc_3_nagra                           : 1
+               cles_sans_argument                        : 1
+               
+[11:11:00:651] ==============> AUTOTEST <================================================================
+
+[11:11:00:901] Autotest Results :
+
+Autotest 1/15 : PRESENCE Done. Result : 1.
+Autotest 2/15 : LOCKING Done. Result : 1.
+Autotest 3/15 : PAD 1 Not Done.
+Autotest 4/15 : PAD 2 Not Done.
+Autotest 5/15 : PAD 3 Not Done.
+Autotest 6/15 : PAD 4 Not Done.
+Autotest 7/15 : PAD 5 Not Done.
+Autotest 8/15 : SCREW 1 Not Done.
+Autotest 9/15 : SCREW 2 Not Done.
+Autotest 10/15 : SCREW 3 Not Done.
+Autotest 11/15 : SCREW 4 Not Done.
+Autotest 12/15 : COLOR 1 Not Done.
+Autotest 13/15 : GROUND CHECK Not Done.
+Autotest 14/15 : FLOW SENSOR PRESENCE Not Done.
+Autotest 15/15 : FLOW SENSOR DIRECTION Not Done.
+
+[11:11:00:981] ==============> WAITING SET TOP BOX <=====================================================
+
+[11:15:59:915] ==============> SET TOP BOX FOUND <=======================================================
+
+[11:16:00:085] ==============> WAITING SET TOP BOX START <===============================================
+
+[11:16:09:290] BOOTING SET TOP BOX (TIME = 782075765)
+
+[11:16:09:380] [PC > STB] dd if=/dev/mmcblk0 bs=4096 count=10496 skip=$((0x11C5F1)) of=/tmp/fsos_bin; truncate -s42164976 /tmp/fsos_bin;md5sum /tmp/fsos_bin
+
+[11:16:09:430] [PC < STB] dd if=/dev/mmcblk0 bs=4096 count=10496 skip=$((0x11C5F1)) of=/tmp/fsos_bin; 
+                           truncate -s42164976 /tmp/fsos_bin;md5sum /tmp/fsos_bin
+                           
+
+[11:16:09:570] [PC < STB] 10496+0 records in
+                           10496+0 records out
+                           
+
+[11:16:09:820] [PC < STB] 49a7fa6cdefe714b81bd605432ba7e66  /tmp/fsos_bin
+                           TT> 
+
+[11:16:09:820] [PC > STB] FLASH_Read ALL
+
+[11:16:09:950] [PC < STB] FLASH_Read ALL
+                           [SAGEMTESTS] OUI_SAGEM = 00604cff
+                           MANUFACTURER_ID = SAGEMCOM0000
+                           HARDWARE_ID = 414a
+                           USAGE_ID = 01
+                           SFIN_SN = INVALID_VALUE
+                           MAC_ADDRESS = 000000000000
+                           HARDWARE_REVISION = 30303031
+                           CUSTOMER_SN = INVALID_VALUE
+                           CIE_SN = 61903137006411
+                           CIE_CODE = 25404726-2
+                           CIE_INDICE = A1
+                           MAC_ADDRESS1 = 000000000000
+                           MAC_ADDRESS2 = 000000000000
+                           MAC_ADDRESS3 = 000000000000
+                           MAC_ADDRESS4 = 000000000000
+                           MAC_ADDRESS5 = 000000000000
+                           MAC_ADDRESS6 = 000000000000
+                           MAC_ADDRESS7 = 000000000000
+                           MAC_ADDRESS8 = 000000000000
+                           MAC_ADDRESS9 = 000000000000
+                           MAC_ADDRESS10 = 000000000000
+                           MAC_ADDRESS11 = 000000000000
+                           MAC_ADDRESS12 = 000000000000
+                           MAC_ADDRESS13 = 000000000000
+                           MAC_ADDRESS14 = 000000000000
+                           MAC_ADDRESS15 = 000000000000
+                           MAC_ADDRESS16 = 000000000000
+                           MAC_ADDRESS17 = 000000000000
+                           MAC_ADDRESS18 = 000000000000
+                           MAC_ADDRESS19 = 000000000000
+                           EXTRA_SN = INVALID_VALUE
+                           FW_VERSION = INVALID_VALUE
+                           LD_VERSION = INVALID_VALUE
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:09:950] [PC > STB] SagemTests_GetVersions
+
+[11:16:09:980] [PC < STB] SagemTests_GetVersions
+                           
+
+[11:16:10:060] [PC < STB] [SAGEMTESTS] SagemTests compiled : Jun 21 2023 at 11:23:53 
+                           
+
+[11:16:10:160] [PC < STB] [SAGEMTESTS] DEFCONFIG = sc_bcm_m377_7216B0_NC_22_CLARO_functional_defconfig
+                           [SAGEMTESTS] BUILDROOT_VERSION = 9882e97bfeb1478cde4539ba1a2f8c34a83e14c6
+                           [SAGEMTESTS] BRANCH = HEAD
+                           [SAGEMTESTS] BCHP_CHIP = 7216
+                           [SAGEMTESTS] PRODUCT = M377_CLARO
+                           [SAGEMTESTS] PROFILE = USINE
+                           [SAGEMTESTS] PIC Version: Not Applicable
+                           [SAGEMTESTS] RF4CE Firmware Version: Not Applicable
+                           [SAGEMTESTS] SagemTest Version : TT_F_M377_CLARO
+                           [SAGEMTESTS] => SagemTests_GetVersions - PASSED <= 
+                           TT> 
+
+[11:16:10:170] [PC > STB] FLASH_Read ALL
+
+[11:16:10:280] [PC < STB] FLASH_Read ALL
+                           [SAGEMTESTS] OUI_SAGEM = 00604cff
+                           MANUFACTURER_ID = SAGEMCOM0000
+                           HARDWARE_ID = 414a
+                           USAGE_ID = 01
+                           SFIN_SN = INVALID_VALUE
+                           MAC_ADDRESS = 000000000000
+                           HARDWARE_REVISION = 30303031
+                           CUSTOMER_SN = INVALID_VALUE
+                           CIE_SN = 61903137006411
+                           CIE_CODE = 25404726-2
+                           CIE_INDICE = A1
+                           MAC_ADDRESS1 = 000000000000
+                           MAC_ADDRESS2 = 000000000000
+                           MAC_ADDRESS3 = 000000000000
+                           MAC_ADDRESS4 = 000000000000
+                           MAC_ADDRESS5 = 000000000000
+                           MAC_ADDRESS6 = 000000000000
+                           MAC_ADDRESS7 = 000000000000
+                           MAC_ADDRESS8 = 000000000000
+                           MAC_ADDRESS9 = 000000000000
+                           MAC_ADDRESS10 = 000000000000
+                           MAC_ADDRESS11 = 000000000000
+                           MAC_ADDRESS12 = 000000000000
+                           MAC_ADDRESS13 = 000000000000
+                           MAC_ADDRESS14 = 000000000000
+                           MAC_ADDRESS15 = 000000000000
+                           MAC_ADDRESS16 = 000000000000
+                           MAC_ADDRESS17 = 000000000000
+                           MAC_ADDRESS18 = 000000000000
+                           MAC_ADDRESS19 = 000000000000
+                           EXTRA_SN = INVALID_VALUE
+                           FW_VERSION = INVALID_VALUE
+                           LD_VERSION = INVALID_VALUE
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:10:290] [PC > STB] SagemTests_GetVersions
+
+[11:16:10:320] [PC < STB] SagemTests_GetVersions
+                           
+
+[11:16:10:400] [PC < STB] [SAGEMTESTS] SagemTests compiled : Jun 21 2023 at 11:23:53 
+                           
+
+[11:16:10:500] [PC < STB] [SAGEMTESTS] DEFCONFIG = sc_bcm_m377_7216B0_NC_22_CLARO_functional_defconfig
+                           [SAGEMTESTS] BUILDROOT_VERSION = 9882e97bfeb1478cde4539ba1a2f8c34a83e14c6
+                           [SAGEMTESTS] BRANCH = HEAD
+                           [SAGEMTESTS] BCHP_CHIP = 7216
+                           [SAGEMTESTS] PRODUCT = M377_CLARO
+                           [SAGEMTESTS] PROFILE = USINE
+                           [SAGEMTESTS] PIC Version: Not Applicable
+                           [SAGEMTESTS] RF4CE Firmware Version: Not Applicable
+                           [SAGEMTESTS] SagemTest Version : TT_F_M377_CLARO
+                           [SAGEMTESTS] => SagemTests_GetVersions - PASSED <= 
+                           TT> 
+
+[11:16:10:500] Set Top Box boot OK
+
+[11:16:10:580] ==============> VERIFYING AUTHORIZATION <=================================================
+
+[11:16:10:690] SN CIE : 61903137006411
+
+[11:16:10:799] Test Code = 1 "Flux de production normal."
+
+[11:16:10:849] Authorization OK
+
+[11:16:10:889] ==============> READING CHIPSET ID <======================================================
+
+[11:16:10:999] [PC > STB] CHIPSET_Read
+
+[11:16:11:049] [PC < STB] CHIPSET_Read
+                           [SAGEMTESTS] Key A ID = 0x060084d942c4adcc
+                           [SAGEMTESTS] Key C ID = 0xc26dc623
+                           [SAGEMTESTS] CUT = B0
+                           [SAGEMTESTS] Full Sales Type: ZF
+                           [SAGEMTESTS] Personality: @@
+                           
+
+[11:16:11:239] [PC < STB] [SAGEMTESTS] => CHIPSET_Read - PASSED <= 
+                           TT> 
+
+[11:16:11:239] ==============> GENERATING SERIALNUMBER <=================================================
+
+[11:16:11:389] Génération / Récupération SN OK
+[11:16:11:429] THREAD INFO : Threads Started with ID : 2068 - 1196 - 8536
+
+[11:16:11:479] Logo loading time: 63ms
+
+[11:16:11:509] ==============> USB TEST <================================================================
+
+[11:16:11:559] Lecture Clé adressesmac - SN = 923276002903
+
+[11:16:11:569] Aucune script de logo récupéré.
+[11:16:11:619] End of logo thread
+
+[11:16:11:679] [PC > STB] FT_LED DISABLE ALL
+
+[11:16:11:719] [PC < STB] FT_LED DISABLE ALL
+                           
+
+[11:16:13:338] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:13:358] [PC > STB] FT_LED ENABLE LED0
+
+[11:16:13:388] [PC < STB] FT_LED ENABLE LED0
+                           
+
+[11:16:14:787] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:14:797] [PC > STB] FT_LED DISABLE ALL
+
+[11:16:14:827] [PC < STB] FT_LED DISABLE ALL
+                           
+
+[11:16:16:257] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:16:267] [PC > STB] FT_LED ENABLE LED1
+
+[11:16:16:297] [PC < STB] FT_LED ENABLE LED1
+                           
+
+[11:16:17:456] End reading key adressesmac : OK (ID = 17486816)
+
+[11:16:17:476] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:17:476] [PC > STB] FT_LED DISABLE ALL
+
+[11:16:17:506] [PC < STB] FT_LED DISABLE ALL
+                           
+
+[11:16:17:556] End reading key adressesmac : OK (ID = 17486817)
+
+[11:16:17:616] End reading key adressesmac : OK (ID = 17486818)
+
+[11:16:17:726] Lecture Clé pk_nasc_3_nagra - SN = 923276002903
+
+[11:16:17:936] End reading key pk_nasc_3_nagra : OK (ID = 2465687)
+
+[11:16:18:056] End of keys reading thread
+
+[11:16:19:135] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:19:155] [PC > STB] FT_LED ENABLE LED3
+
+[11:16:19:185] [PC < STB] FT_LED ENABLE LED3
+                           
+
+[11:16:20:574] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:20:584] [PC > STB] FT_USB_CheckDevices
+
+[11:16:20:624] [PC < STB] FT_USB_CheckDevices
+                           
+
+[11:16:20:704] [PC < STB] [SAGEMTESTS] Number of USB Host we want to detect : 1 
+                           [SAGEMTESTS] USB Check on Host : 1 new device detected
+                           [SAGEMTESTS] => FT_USB_CheckDevices - PASSED <= 
+                           TT> 
+
+[11:16:20:704] USB detected
+
+[11:16:20:804] ==============> NAND FLASH TEST <=========================================================
+
+[11:16:20:914] [PC > STB] NAND_Id
+
+[11:16:20:984] [PC < STB] NAND_Id
+                           [SAGEMTESTS] Name		: DG4008
+                           [SAGEMTESTS] Type		: MMC
+                           [SAGEMTESTS] Manufacturer ID	: 0x000045
+                           [SAGEMTESTS] Serial Number	: 0xa6661b29
+                           [SAGEMTESTS] Block Size		: 512
+                           [SAGEMTESTS] Block Count	: 13880960
+                           [SAGEMTESTS] Total Size		: 6.62 GB (7107051520 B)
+                           [SAGEMTESTS] => NAND_Id - PASSED <= 
+                           TT> 
+
+[11:16:20:984] Flash Nand ID : 0x000045
+
+[11:16:21:044] 6.62 
+[11:16:21:094] The NAND size is Conform 
+[11:16:21:154] ==============> TEST BOUTON MUTE <========================================================
+
+[11:16:21:304] [PC > STB] FT_AUDIO_TEST_MICS_LED 100
+
+[11:16:21:324] [PC < STB] FT_AUDIO_TEST_MICS_LED 100
+                           
+
+[11:16:27:921] [PC < STB] Recording WAVE '/tmp/audio.wav' : Signed 32 bit Little Endian, Rate 48000 Hz, Channels 4
+                           
+
+[11:16:31:599] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           [SAGEMTESTS] Mics are not connected or Mode Mute is activated
+                           [SAGEMTESTS] => FT_AUDIO_TEST_MICS_LED - PASSED <= 
+                           TT> 
+
+[11:16:31:619]  BOUTON MUTE OK 
+
+[11:16:31:709] ==============> TEST BOUTON MUTE OFF <====================================================
+
+[11:16:33:867] [PC > STB] FT_AUDIO_TEST_MICS_LED 100
+
+[11:16:33:887] [PC < STB] FT_AUDIO_TEST_MICS_LED 100
+                           
+
+[11:16:40:594] [PC < STB] Recording WAVE '/tmp/audio.wav' : Signed 32 bit Little Endian, Rate 48000 Hz, Channels 4
+                           
+
+[11:16:44:052] [PC < STB] [SAGEMTESTS] Mics are connected
+                           
+
+[11:16:44:072]  BOUTON MUTE OK 
+
+[11:16:44:162] ==============> BUTTONS TEST <============================================================
+
+[11:16:44:272] [PC > STB] FT_DetectSwitches ENABLE
+
+[11:16:44:302] [PC < STB] FT_DetectSwitches ENABLE
+                           
+
+[11:16:45:371] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           [SAGEMTESTS] => FT_AUDIO_TEST_MICS_LED - PASSED <= 
+                           TT> FT_DetectSwitches ENABLE
+                           
+
+[11:16:45:501] [PC < STB] [SAGEMTESTS] Start Detection of Switches
+                           [SAGEMTESTS] => FT_DetectSwitches - PASSED <= 
+                           TT> 
+
+[11:16:45:621] [PC < STB] killall: evtest: no process killed
+                           
+
+[11:16:46:481] [PC < STB] [SAGEMTESTS] switch 116 pressed
+                           
+
+[11:16:46:671] [PC < STB] [SAGEMTESTS] switch 116 released
+                           
+
+[11:16:47:201] [PC < STB] [SAGEMTESTS] switch 148 pressed
+                           
+
+[11:16:47:280] [PC < STB] [SAGEMTESTS] switch 148 released
+                           
+
+[11:16:47:320] ==============> CHIPSET TEMPERATURE TEST <================================================
+
+[11:16:47:440] [PC > STB] FT_CPU_CheckTemperature 80
+
+[11:16:47:470] [PC < STB] FT_CPU_CheckTemperature 80
+                           
+
+[11:16:47:550] [PC < STB] [SAGEMTESTS] Current CPU temperature is 47 degrees C
+                           [SAGEMTESTS] => FT_CPU_CheckTemperature - PASSED <= 
+                           TT> 
+
+[11:16:47:620] End of functionnal thread
+
+[11:16:47:760] THREAD INFO : Threads Closed with Exit Code : -1 - 1 - 0
+
+[11:16:47:840] ==============> GENERATION DE FICHIERS BINAIRES <=========================================
+
+[11:16:49:239] Génération fichiers cles OK
+[11:16:49:329] ==============> SERIALISATION STB <=======================================================
+
+[11:16:49:439] ==============> Writing SN Sagem
+
+[11:16:49:489] [PC > STB] FLASH_Write SFIN_SN 923276002903
+
+[11:16:49:539] [PC < STB] FLASH_Write SFIN_SN 923276002903
+                           [SAGEMTESTS] SFIN_SN = 923276002903
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:579] ==============> Ecriture sn client Claro
+
+[11:16:49:629] [PC > STB] FLASH_Write CUSTOMER_SN 833184927001382
+
+[11:16:49:679] [PC < STB] FLASH_Write CUSTOMER_SN 833184927001382
+                           [SAGEMTESTS] CUSTOMER_SN = 833184927001382
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:719] ==============> Writing keys
+
+[11:16:49:769] Writing key adressesmac
+
+[11:16:49:819] [PC > STB] FLASH_Write MAC_ADDRESS 880FA29F5452
+
+[11:16:49:859] [PC < STB] FLASH_Write MAC_ADDRESS 880FA29F5452
+                           [SAGEMTESTS] MAC_ADDRESS = 880fa29f5452
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:859] [PC > STB] FLASH_Read MAC_ADDRESS
+
+[11:16:49:899] [PC < STB] FLASH_Read MAC_ADDRESS
+                           [SAGEMTESTS] MAC_ADDRESS = 880fa29f5452
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:49:899] [PC > STB] FLASH_Write MAC_ADDRESS1 880FA29F5453
+
+[11:16:49:949] [PC < STB] FLASH_Write MAC_ADDRESS1 880FA29F5453
+                           [SAGEMTESTS] MAC_ADDRESS1 = 880fa29f5453
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:949] [PC > STB] FLASH_Read MAC_ADDRESS1
+
+[11:16:49:999] [PC < STB] FLASH_Read MAC_ADDRESS1
+                           [SAGEMTESTS] MAC_ADDRESS1 = 880fa29f5453
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:49:999] [PC > STB] FLASH_Write MAC_ADDRESS2 880FA29F5454
+
+[11:16:50:049] [PC < STB] FLASH_Write MAC_ADDRESS2 880FA29F5454
+                           [SAGEMTESTS] MAC_ADDRESS2 = 880fa29f5454
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:50:049] [PC > STB] FLASH_Read MAC_ADDRESS2
+
+[11:16:50:099] [PC < STB] FLASH_Read MAC_ADDRESS2
+                           [SAGEMTESTS] MAC_ADDRESS2 = 880fa29f5454
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:50:099] End writing adressesmac : OK
+
+[11:16:50:219] Writing key pk_nasc_3_nagra
+
+[11:16:50:269] End writing pk_nasc_3_nagra : OK
+
+[11:16:50:379] Writing key cles_sans_argument
+
+[11:16:50:439] [PC > STB] FUSE_GetStates_RAW 1 0x00000001 0x00000001
+
+[11:16:50:489] [PC < STB] FUSE_GetStates_RAW 1 0x00000001 0x00000001
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 1)
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 1) - subfuse[0]=0x00000001 matches expected value
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 1) - State : OK -  ACTIVATED
+                           
+
+[11:16:50:499] [PC > STB] FUSE_GetStates_RAW 7 0x00000001 0x00000001
+
+[11:16:50:529] [PC < STB] FUSE_GetStates_RAW 7 0x00000001 0x00000001
+                           
+
+[11:16:50:699] [PC < STB] [SAGEMTESTS] => FUSE_GetStates_RAW - PASSED <= 
+                           TT> FUSE_GetStates_RAW 7 0x00000001 0x00000001
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 7)
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 7) - subfuse[0]=0x00000001 matches expected value
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 7) - State : OK -  ACTIVATED
+                           
+
+[11:16:50:709] End writing cles_sans_argument : OK
+
+[11:16:50:819] [PC > STB] FLASH_Read CIE_SN
+
+[11:16:50:849] [PC < STB] FLASH_Read CIE_SN
+                           
+
+[11:16:50:909] [PC < STB] [SAGEMTESTS] => FUSE_GetStates_RAW - PASSED <= 
+                           TT> FLASH_Read CIE_SN
+                           [SAGEMTESTS] CIE_SN = 61903137006411
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:50:909] ==============> Start: properties update
+
+[11:16:50:969] ==============> End: properties update
+
+[11:16:51:019] ==============> Uniqueness violation filter
+
+[11:16:51:208] [PC > STB] SWITCH_TO_BP3
+
+[11:16:51:228] [PC < STB] SWITCH_TO_BP3
+                           
+
+[11:16:51:718] [PC < STB] [SAGEMTESTS] => SWITCH_TO_BP3 - PASSED <= 
+                           TT> 
+
+[11:16:51:728] [PC > STB] sync
+
+[11:16:51:768] [PC < STB] sync
+                           TT> 
+
+[11:16:51:768] Writing informations in flash OK
+
+[11:16:51:848] ==============> DB TRACKING <=============================================================
+
+[11:16:52:608] Tracking OK
+
+[11:16:52:698] ==============> PRINTING LABEL <==========================================================
+
+[11:16:52:978] ===================> END OF TEST <========================================================
+
+[11:16:52:978] ############ TESTS OK ############
+
+[11:16:52:978] TEST LENGTH : 41734 ms
+
+[11:16:52:978] SOFT VERSION : S14004AA48_0
+
+[11:16:52:978] SLOT STB COUNT : 7
+
+[11:16:52:988] <CIE>  Name                               : CIE DCIW377V Claro RUN1 Equipé
+               <CIE>  Reference                          : 254047262
+               <CIE>  Index                              : A01
+               <SFIN> Name                               : Dec. Assemblé DCIW377V Claro
+               <SFIN> Reference                          : 254030639
+               <SFIN> Index                              : A01
+               <PFIN> Reference                          : 254030671
+               <PFIN> Index                              : A01
+               
+[11:16:52:988] Sn SFIN                                   : 923276002903
+               ID Sn SFIN                                : 48976177
+               Sn CIE                                    : 61903137006411
+               CIE Version                               : 254047262
+               CIE Index                                 : A1
+               Movement ID test CIE                      : 345469742
+               Authorization code                        : 1
+               Error label                               : Aucune script de logo récupéré.
+               
+[11:16:52:988] etat_DEC_BTF_sTestDate                           : 03/07/2023 11:16:52
+               etat_DEC_BTF_sTermTechVersion                    : TT_F_M377_CLARO
+               etat_DEC_BTF_iNumCentre                          : 9
+               etat_DEC_BTF_iNumSlot                            : 0
+               etat_DEC_BTF_iDureeManipOperateur                : 1938
+               etat_DEC_BTF_sCaStbId                            : 426DC623
+               etat_DEC_BTF_sIdFlashNand                        : 0x000045
+               etat_DEC_BTF_sMacAdresse                         : 880FA29F5452
+               etat_DEC_BTF_sMacAdresse2                        : 880FA29F5453
+               etat_DEC_BTF_sMacAdresse3                        : 880FA29F5454
+               etat_DEC_BTF_sCasId                              : 3078383931393946373400
+               etat_DEC_BTF_sDecCasIdPlusCle                    : 230015781226
+               etat_DEC_BTF_sClientSn                           : 833184927001382
+               etat_DEC_BTF_sChipsetSnKEYA                      : 060084d942c4adcc
+               etat_DEC_BTF_sChipsetSnKEYC                      : c26dc623
+               
+[11:16:52:988] 
+[11:16:52:988] Mesure <BTF_bLeds>                        : Mesure Leds - Status 2
+               Mesure <BTF_fLed1>                        : Mesure LED1 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_fLed2>                        : Mesure LED2 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_fLed3>                        : Mesure LED3 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_fLed4>                        : Mesure LED4 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_bSmartCard>                   : Resultat du test de la SmartCard - Status 2
+               Mesure <BTF_bUsb>                         : Resultat du test de l'USB - Status 0
+                                                           Duree 9156 ms
+               Mesure <BTF_bSDCard>                      : Resultat du test de la SD Card - Status 2
+               Mesure <BTF_bIr>                          : Resultat du test de l'infrarouge - Status 2
+               Mesure <BTF_bBoutons>                     : Resultat du test des boutons - Status 0
+                                                           Duree 3047 ms
+               Mesure <BTF_bPatinsVis>                   : Resultat du test des patins et des vis - Status 2
+               Mesure <BTF_bHdd>                         : Resultat du test HDD - Status 2
+               Mesure <BTF_bFlashNor>                    : Pour Test flash Nor - Status 2
+               Mesure <BTF_bFlashNand>                   : Resultat du test de la Flash Nand - Status 0
+                                                           Duree 250 ms
+               Mesure <BTF_fTempChipset>                 : Valeur de la température du Chipset - Status 0
+                                                           20.000000 °C < ... < 80.000000 °C
+                                                           47.000000 °C
+                                                           Duree 109 ms
+               Mesure <BTF_fLed1_R>                      : Mesure LED1 Rouge BTF - Status 2
+                                                           10.000000  < ... < 100.000000 
+               Mesure <BTF_fLed2_R>                      : Mesure LED2 Rouge BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed3_R>                      : Mesure LED3 Rouge BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed4_R>                      : Mesure LED4 Rouge BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed1_V>                      : Mesure LED1 Vert BTF - Status 2
+                                                           40.000000  < ... < 200.000000 
+               Mesure <BTF_fLed2_V>                      : Mesure LED2 Vert BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed3_V>                      : Mesure LED3 Vert BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed4_V>                      : Mesure LED4 Vert BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed1_B>                      : Mesure LED1 Blanc BTF - Status 2
+                                                           10.000000  < ... < 180.000000 
+               Mesure <BTF_fLed2_B>                      : Mesure LED2 Blanc BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed3_B>                      : Mesure LED3 Blanc BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed4_B>                      : Mesure LED4 Blanc BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed1_I>                      : Mesure LED1 Intensité BTF - Status 2
+                                                           420.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed2_I>                      : Mesure LED2 Intensité BTF - Status 2
+                                                           500.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed3_I>                      : Mesure LED3 Intensité BTF - Status 2
+                                                           500.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed4_I>                      : Mesure LED4 Intensité BTF - Status 2
+                                                           500.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed1_X>                      : Mesure LED1 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed2_X>                      : Mesure LED2 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed3_X>                      : Mesure LED3 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed4_X>                      : Mesure LED4 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed1_Y>                      : Mesure LED1 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed2_Y>                      : Mesure LED2 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed3_Y>                      : Mesure LED3 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed4_Y>                      : Mesure LED4 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               
+[11:16:53:567] ==============> WAITING FOR SET TOP BOX REMOVAL <=========================================
+
+[11:45:00:589] SET TOP BOX REMOVED FROM SLOT (TIME = 783807031)
+
+=======
+[11:11:00:631] ===================> START OF TEST <======================================================
+
+[11:11:00:631] ######## STB CONFIGURATION #######################
+[11:11:00:631] conf_DEC_BTF_sVersion                            : S14004AA48
+               conf_DEC_GEN_sFamilleChipset                     : H205
+               conf_DEC_GEN_iVitessePortComStb                  : 115200
+               conf_DEC_GEN_sTypeTT                             : Linux
+               conf_DEC_GEN_sPrompt                             : TT>
+               conf_DEC_GEN_bFlagControlFlux                    : 1
+               conf_DEC_BTF_bFlagPreAlimentation                : 1
+               conf_DEC_BTF_sCdeTTStbFin                        : [SWITCH_TO_BP3{TimeOut:10}{Pass:PASSED}][sync{Pass:TT>}]
+               conf_DEC_BTF_sCdeTTStbInit                       : [FLASH_Read ALL{Pass:TT>}][SagemTests_GetVersions{TimeOut:5}{Pass:TT>}]
+               conf_DEC_BTF_bFlagDesactivLectureChipsetID       : 0
+               conf_DEC_GEN_sFullSalesType                      : KWAA
+               conf_DEC_GEN_sTermTech                           : TT_F_M377_CLARO
+               conf_DEC_BTF_bFlagServeurFTPInterneSTBActif      : 0
+               conf_DEC_BTF_sCdeTTDemarrageFtpStb               : [tcpsvd -vE 0.0.0.0 21 ftpd -w /tmp/ftp_directory &> /dev/null &{Pass:BCM7252>}][echo $?{Pass:0}]
+               conf_DEC_BTF_sConfigInterfaceResauParSlot        : ifconfig eth0 up && ifconfig gphy hw ether 00:AA:BB:CC:DD:10|ifconfig eth0 up && ifconfig gphy hw ether 00:AA:BB:CC:DD:11|ifconfig eth0 up && ifconfig gphy hw ether 00:AA:BB:CC:DD:12
+               conf_DEC_BTF_sConfigAddressIPParSlot             : 190.170.10.10|190.170.10.11|10.25.14.13
+               conf_DEC_BTF_iNombrePatins                       : 0
+               conf_DEC_BTF_iNombreVis                          : 0
+               conf_DEC_BTF_iNombreBoutons                      : 2
+               conf_DEC_BTF_iTimeoutBouton                      : 20
+               conf_DEC_BTF_sCdeTTActivationBouton              : [FT_DetectSwitches ENABLE{Pass:PASSED}]
+               conf_DEC_BTF_sRetourBoutonAttendu                : [SAGEMTESTS] switch 116 released|[SAGEMTESTS] switch 148 released
+               conf_DEC_BTF_iNbreAppuiBoutons                   : 1
+               conf_DEC_BTF_sCdeTTTestEcran                     : [FT_FPOUT DISPLAY_PIXELS ALL{Pass:PASSED}{Fail:FAILED}]|[FT_FPOUT DISPLAY_PIXELS CLEAN{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_bFlagTestFlashNand                  : 1
+               conf_DEC_BTF_sCdeTTTestFlashNand                 : [NAND_Id{Pass:PASSED}{Fail:FAILED}{Manufacturer ID	: %}{Total Size		: %}]
+               conf_DEC_BTF_sIdFlashNand                        : 0x000090|0x000011|0x000045
+               conf_DEC_BTF_bFlagTestFlashNor                   : 0
+               conf_DEC_BTF_sCdeTTTestFlashNor                  : [NOR_Id{Pass:PASSED}{Fail:FAILED}{Chip ID		 = %}{Manufacturer ID	 = %}{Write Buffer Size	 = %}]
+               conf_DEC_BTF_sFlashNorDeviceId                   : 0x00169e|0x0016ba
+               conf_DEC_BTF_bFlagTestHdd                        : 0
+               conf_DEC_BTF_sCdeTTHddInfo                       : [dd if=/dev/zero  bs=1M count=16 | tr "\000" "\377" > /dev/mmcblk0gp0 && echo Return=$?{Pass: Return=0}][dd if=/dev/zero  bs=1M count=16 | tr "\000" "\377" > /dev/mmcblk0gp1 && echo Return=$?{Pass: Return=0}][dd if=/dev/zero  bs=1M count=16 | tr "\000" "\377" > /dev/mmcblk0gp3 && echo Return=$?{Pass: Return=0}][FLASH_Read ALL{Pass:BCM7252>}][SagemTests_GetVersions{TimeOut:5}{Pass:BCM7252>}]
+               conf_DEC_BTF_sHddModel                           : TOSHIBA MQ01ABD050VS
+               conf_DEC_BTF_bFlagVerifTransactionHdd            : 1
+               conf_DEC_BTF_sHddTransactions                    : CTL_ELSIL_OK
+               conf_DEC_BTF_bFlagTestLeds                       : 0
+               conf_DEC_BTF_sCdeTTDebutFinTestLeds              : [FT_LED DISABLE ALL{Pass:PASSED}]
+               conf_DEC_BTF_bFlagTestIr                         : 0
+               conf_DEC_BTF_sCdePicIrChoixMode                  : [PT3_OIR0_NEC 0{Pass:OK}{Fail:ERROR}]
+               conf_DEC_BTF_sCdeTTIrChoixMode                   : [FT_IR ENABLE{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTIrDisable                     : [FT_IR DISABLE {Pass:PASSED}]
+               conf_DEC_BTF_sTrameIrAttendue                    : [SAGEMTESTS] RC# 000b released
+               conf_DEC_BTF_sCdeTTRecupInfoStb                  : [dd if=/dev/mmcblk0 bs=4096 count=10496 skip=$((0x11C5F1)) of=/tmp/fsos_bin; truncate -s42164976 /tmp/fsos_bin;md5sum /tmp/fsos_bin{TimeOut:10}{Pass:49a7fa6cdefe714b81bd605432ba7e66}][FLASH_Read ALL{Pass:TT>}][SagemTests_GetVersions{TimeOut:5}{Pass:TT>}]
+               conf_DEC_BTF_bFlagTestSDCard                     : 0
+               conf_DEC_BTF_sCdeTTTestSDCard                    : [FT_SDCARD_GetInfos{TimeOut:10}{Pass:FT_SDCARD_GetInfos - PASSED}{[SAGEMTESTS] CID  :%}]
+               conf_DEC_BTF_bFlagPasVerifAbsenceSmrtCrd         : 1
+               conf_DEC_BTF_bFlagTestSmartCard                  : 0
+               conf_DEC_BTF_sCdeTTTestSmartCardEtape1           : [FT_SMARTCARD_FullTests{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_bFlagTestUsb                        : 1
+               conf_DEC_BTF_sCdeTTTestUsb                       : [FT_LED DISABLE ALL{TimeOut:4}{Pass:PASSED}][FT_LED ENABLE LED0{TimeOut:4}{Pass:PASSED}][FT_LED DISABLE ALL{TimeOut:4}{Pass:PASSED}][FT_LED ENABLE LED1{TimeOut:4}{Pass:PASSED}][FT_LED DISABLE ALL{TimeOut:4}{Pass:PASSED}][FT_LED ENABLE LED3{TimeOut:4}{Pass:PASSED}][FT_USB_CheckDevices{Pass:new device detected}]
+               conf_DEC_BTF_bFlagTestVentilateur                : 0
+               conf_DEC_BTF_bFlagVentilateurExpluseAir          : 0
+               conf_DEC_BTF_sCdeTTFanOff                        : [FT_FAN DISABLE{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_sCdeTTFanOn                         : [FT_FAN ENABLE{Pass:PASSED}{Fail:FAILED}]
+               conf_DEC_BTF_iTempsPauseVentilateur              : 2500|1500
+               conf_DEC_BTF_sPresenceRadiateurFormule           : 0.000000000001644314|-0.000000001495403398|0.000000475746922329|-0.000061828038877648|0.001354498507833440|0.408869281288502000|45.675224170435300000
+               conf_DEC_BTF_bFlagTestTemperatureChipset         : 1
+               conf_DEC_BTF_sCdeTTTemperatureChipset            : [FT_CPU_CheckTemperature 80{Pass:FT_CPU_CheckTemperature - PASSED}{Current CPU temperature is %}]
+               conf_DEC_BTF_bFlagPasVerifierLockFlash           : 1
+               conf_DEC_BFS_sHardwareId                         : 3750
+               conf_DEC_BFS_sCmdTTClesSansArgument              : [FUSE_GetStates_RAW 1 0x00000001 0x00000001{Pass:OK -  ACTIVATED}][FUSE_GetStates_RAW 7 0x00000001 0x00000001{Pass:OK -  ACTIVATED}]
+               conf_DEC_BFS_sCdeTTEcritureMac                   : FLASH_Write MAC_ADDRESS |[SAGEMTESTS] MAC_ADDRESS = |FLASH_Write MAC_ADDRESS1 |[SAGEMTESTS] MAC_ADDRESS1 = |FLASH_Write MAC_ADDRESS2 |[SAGEMTESTS] MAC_ADDRESS2 = 
+               conf_DEC_BFS_sCdeTTRelectureMac                  : FLASH_Read MAC_ADDRESS |[SAGEMTESTS] MAC_ADDRESS = |FLASH_Read MAC_ADDRESS1 |[SAGEMTESTS] MAC_ADDRESS1 = |FLASH_Read MAC_ADDRESS2 |[SAGEMTESTS] MAC_ADDRESS2 = 
+               conf_DEC_BFS_bFlagImpressionViaBdd               : 1
+               conf_DEC_BFS_sMasqueImpression                   : Eiq_const_377Vclaro
+               conf_DEC_BFS_bFlagSnClaro                        : 1
+               conf_DEC_BTF_iNombreLed                          : 4
+               conf_DEC_BTF_sSequenceCouleursTestLeds           : B|B|B|B
+               conf_DEC_BTF_bFlagTestLedsSequentiel             : 1
+               conf_DEC_BTF_sCdeTTActivationLed1                : [FT_LED ENABLE LED3{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTActivationLed2                : [FT_LED ENABLE LED2{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTActivationLed3                : [FT_LED ENABLE LED1{Pass:PASSED}]
+               conf_DEC_BTF_sCdeTTActivationLed4                : [FT_LED ENABLE LED0{Pass:PASSED}]
+               conf_DEC_BTF_iTailleFlashNandMin                 : 6
+               conf_DEC_BTF_bFlagTestBoutonMute                 : 1
+               conf_DEC_BTF_sCdeTTActivationBoutonMute          : [FT_AUDIO_TEST_MICS_LED 100{TimeOut:15}{Pass:Mics are not connected}]|[FT_AUDIO_TEST_MICS_LED 100{TimeOut:15}{Pass:Mics are connected}]
+               conf_DEC_BTF_bFlagTestBoutonMuteOFF              : 1
+               conf_DEC_BTF_bFlagChinpset_NAGRA                 : 1
+               conf_DEC_BTF_bFlagNewCHIPSET                     : 1
+               conf_DEC_BFS_bFlagSnClaroNewFormat               : 0
+               
+[11:11:00:631] adressesmac                               : 3
+               pk_nasc_3_nagra                           : 1
+               cles_sans_argument                        : 1
+               
+[11:11:00:651] ==============> AUTOTEST <================================================================
+
+[11:11:00:901] Autotest Results :
+
+Autotest 1/15 : PRESENCE Done. Result : 1.
+Autotest 2/15 : LOCKING Done. Result : 1.
+Autotest 3/15 : PAD 1 Not Done.
+Autotest 4/15 : PAD 2 Not Done.
+Autotest 5/15 : PAD 3 Not Done.
+Autotest 6/15 : PAD 4 Not Done.
+Autotest 7/15 : PAD 5 Not Done.
+Autotest 8/15 : SCREW 1 Not Done.
+Autotest 9/15 : SCREW 2 Not Done.
+Autotest 10/15 : SCREW 3 Not Done.
+Autotest 11/15 : SCREW 4 Not Done.
+Autotest 12/15 : COLOR 1 Not Done.
+Autotest 13/15 : GROUND CHECK Not Done.
+Autotest 14/15 : FLOW SENSOR PRESENCE Not Done.
+Autotest 15/15 : FLOW SENSOR DIRECTION Not Done.
+
+[11:11:00:981] ==============> WAITING SET TOP BOX <=====================================================
+
+[11:15:59:915] ==============> SET TOP BOX FOUND <=======================================================
+
+[11:16:00:085] ==============> WAITING SET TOP BOX START <===============================================
+
+[11:16:09:290] BOOTING SET TOP BOX (TIME = 782075765)
+
+[11:16:09:380] [PC > STB] dd if=/dev/mmcblk0 bs=4096 count=10496 skip=$((0x11C5F1)) of=/tmp/fsos_bin; truncate -s42164976 /tmp/fsos_bin;md5sum /tmp/fsos_bin
+
+[11:16:09:430] [PC < STB] dd if=/dev/mmcblk0 bs=4096 count=10496 skip=$((0x11C5F1)) of=/tmp/fsos_bin; 
+                           truncate -s42164976 /tmp/fsos_bin;md5sum /tmp/fsos_bin
+                           
+
+[11:16:09:570] [PC < STB] 10496+0 records in
+                           10496+0 records out
+                           
+
+[11:16:09:820] [PC < STB] 49a7fa6cdefe714b81bd605432ba7e66  /tmp/fsos_bin
+                           TT> 
+
+[11:16:09:820] [PC > STB] FLASH_Read ALL
+
+[11:16:09:950] [PC < STB] FLASH_Read ALL
+                           [SAGEMTESTS] OUI_SAGEM = 00604cff
+                           MANUFACTURER_ID = SAGEMCOM0000
+                           HARDWARE_ID = 414a
+                           USAGE_ID = 01
+                           SFIN_SN = INVALID_VALUE
+                           MAC_ADDRESS = 000000000000
+                           HARDWARE_REVISION = 30303031
+                           CUSTOMER_SN = INVALID_VALUE
+                           CIE_SN = 61903137006411
+                           CIE_CODE = 25404726-2
+                           CIE_INDICE = A1
+                           MAC_ADDRESS1 = 000000000000
+                           MAC_ADDRESS2 = 000000000000
+                           MAC_ADDRESS3 = 000000000000
+                           MAC_ADDRESS4 = 000000000000
+                           MAC_ADDRESS5 = 000000000000
+                           MAC_ADDRESS6 = 000000000000
+                           MAC_ADDRESS7 = 000000000000
+                           MAC_ADDRESS8 = 000000000000
+                           MAC_ADDRESS9 = 000000000000
+                           MAC_ADDRESS10 = 000000000000
+                           MAC_ADDRESS11 = 000000000000
+                           MAC_ADDRESS12 = 000000000000
+                           MAC_ADDRESS13 = 000000000000
+                           MAC_ADDRESS14 = 000000000000
+                           MAC_ADDRESS15 = 000000000000
+                           MAC_ADDRESS16 = 000000000000
+                           MAC_ADDRESS17 = 000000000000
+                           MAC_ADDRESS18 = 000000000000
+                           MAC_ADDRESS19 = 000000000000
+                           EXTRA_SN = INVALID_VALUE
+                           FW_VERSION = INVALID_VALUE
+                           LD_VERSION = INVALID_VALUE
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:09:950] [PC > STB] SagemTests_GetVersions
+
+[11:16:09:980] [PC < STB] SagemTests_GetVersions
+                           
+
+[11:16:10:060] [PC < STB] [SAGEMTESTS] SagemTests compiled : Jun 21 2023 at 11:23:53 
+                           
+
+[11:16:10:160] [PC < STB] [SAGEMTESTS] DEFCONFIG = sc_bcm_m377_7216B0_NC_22_CLARO_functional_defconfig
+                           [SAGEMTESTS] BUILDROOT_VERSION = 9882e97bfeb1478cde4539ba1a2f8c34a83e14c6
+                           [SAGEMTESTS] BRANCH = HEAD
+                           [SAGEMTESTS] BCHP_CHIP = 7216
+                           [SAGEMTESTS] PRODUCT = M377_CLARO
+                           [SAGEMTESTS] PROFILE = USINE
+                           [SAGEMTESTS] PIC Version: Not Applicable
+                           [SAGEMTESTS] RF4CE Firmware Version: Not Applicable
+                           [SAGEMTESTS] SagemTest Version : TT_F_M377_CLARO
+                           [SAGEMTESTS] => SagemTests_GetVersions - PASSED <= 
+                           TT> 
+
+[11:16:10:170] [PC > STB] FLASH_Read ALL
+
+[11:16:10:280] [PC < STB] FLASH_Read ALL
+                           [SAGEMTESTS] OUI_SAGEM = 00604cff
+                           MANUFACTURER_ID = SAGEMCOM0000
+                           HARDWARE_ID = 414a
+                           USAGE_ID = 01
+                           SFIN_SN = INVALID_VALUE
+                           MAC_ADDRESS = 000000000000
+                           HARDWARE_REVISION = 30303031
+                           CUSTOMER_SN = INVALID_VALUE
+                           CIE_SN = 61903137006411
+                           CIE_CODE = 25404726-2
+                           CIE_INDICE = A1
+                           MAC_ADDRESS1 = 000000000000
+                           MAC_ADDRESS2 = 000000000000
+                           MAC_ADDRESS3 = 000000000000
+                           MAC_ADDRESS4 = 000000000000
+                           MAC_ADDRESS5 = 000000000000
+                           MAC_ADDRESS6 = 000000000000
+                           MAC_ADDRESS7 = 000000000000
+                           MAC_ADDRESS8 = 000000000000
+                           MAC_ADDRESS9 = 000000000000
+                           MAC_ADDRESS10 = 000000000000
+                           MAC_ADDRESS11 = 000000000000
+                           MAC_ADDRESS12 = 000000000000
+                           MAC_ADDRESS13 = 000000000000
+                           MAC_ADDRESS14 = 000000000000
+                           MAC_ADDRESS15 = 000000000000
+                           MAC_ADDRESS16 = 000000000000
+                           MAC_ADDRESS17 = 000000000000
+                           MAC_ADDRESS18 = 000000000000
+                           MAC_ADDRESS19 = 000000000000
+                           EXTRA_SN = INVALID_VALUE
+                           FW_VERSION = INVALID_VALUE
+                           LD_VERSION = INVALID_VALUE
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:10:290] [PC > STB] SagemTests_GetVersions
+
+[11:16:10:320] [PC < STB] SagemTests_GetVersions
+                           
+
+[11:16:10:400] [PC < STB] [SAGEMTESTS] SagemTests compiled : Jun 21 2023 at 11:23:53 
+                           
+
+[11:16:10:500] [PC < STB] [SAGEMTESTS] DEFCONFIG = sc_bcm_m377_7216B0_NC_22_CLARO_functional_defconfig
+                           [SAGEMTESTS] BUILDROOT_VERSION = 9882e97bfeb1478cde4539ba1a2f8c34a83e14c6
+                           [SAGEMTESTS] BRANCH = HEAD
+                           [SAGEMTESTS] BCHP_CHIP = 7216
+                           [SAGEMTESTS] PRODUCT = M377_CLARO
+                           [SAGEMTESTS] PROFILE = USINE
+                           [SAGEMTESTS] PIC Version: Not Applicable
+                           [SAGEMTESTS] RF4CE Firmware Version: Not Applicable
+                           [SAGEMTESTS] SagemTest Version : TT_F_M377_CLARO
+                           [SAGEMTESTS] => SagemTests_GetVersions - PASSED <= 
+                           TT> 
+
+[11:16:10:500] Set Top Box boot OK
+
+[11:16:10:580] ==============> VERIFYING AUTHORIZATION <=================================================
+
+[11:16:10:690] SN CIE : 61903137006411
+
+[11:16:10:799] Test Code = 1 "Flux de production normal."
+
+[11:16:10:849] Authorization OK
+
+[11:16:10:889] ==============> READING CHIPSET ID <======================================================
+
+[11:16:10:999] [PC > STB] CHIPSET_Read
+
+[11:16:11:049] [PC < STB] CHIPSET_Read
+                           [SAGEMTESTS] Key A ID = 0x060084d942c4adcc
+                           [SAGEMTESTS] Key C ID = 0xc26dc623
+                           [SAGEMTESTS] CUT = B0
+                           [SAGEMTESTS] Full Sales Type: ZF
+                           [SAGEMTESTS] Personality: @@
+                           
+
+[11:16:11:239] [PC < STB] [SAGEMTESTS] => CHIPSET_Read - PASSED <= 
+                           TT> 
+
+[11:16:11:239] ==============> GENERATING SERIALNUMBER <=================================================
+
+[11:16:11:389] Génération / Récupération SN OK
+[11:16:11:429] THREAD INFO : Threads Started with ID : 2068 - 1196 - 8536
+
+[11:16:11:479] Logo loading time: 63ms
+
+[11:16:11:509] ==============> USB TEST <================================================================
+
+[11:16:11:559] Lecture Clé adressesmac - SN = 923276002903
+
+[11:16:11:569] Aucune script de logo récupéré.
+[11:16:11:619] End of logo thread
+
+[11:16:11:679] [PC > STB] FT_LED DISABLE ALL
+
+[11:16:11:719] [PC < STB] FT_LED DISABLE ALL
+                           
+
+[11:16:13:338] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:13:358] [PC > STB] FT_LED ENABLE LED0
+
+[11:16:13:388] [PC < STB] FT_LED ENABLE LED0
+                           
+
+[11:16:14:787] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:14:797] [PC > STB] FT_LED DISABLE ALL
+
+[11:16:14:827] [PC < STB] FT_LED DISABLE ALL
+                           
+
+[11:16:16:257] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:16:267] [PC > STB] FT_LED ENABLE LED1
+
+[11:16:16:297] [PC < STB] FT_LED ENABLE LED1
+                           
+
+[11:16:17:456] End reading key adressesmac : OK (ID = 17486816)
+
+[11:16:17:476] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:17:476] [PC > STB] FT_LED DISABLE ALL
+
+[11:16:17:506] [PC < STB] FT_LED DISABLE ALL
+                           
+
+[11:16:17:556] End reading key adressesmac : OK (ID = 17486817)
+
+[11:16:17:616] End reading key adressesmac : OK (ID = 17486818)
+
+[11:16:17:726] Lecture Clé pk_nasc_3_nagra - SN = 923276002903
+
+[11:16:17:936] End reading key pk_nasc_3_nagra : OK (ID = 2465687)
+
+[11:16:18:056] End of keys reading thread
+
+[11:16:19:135] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:19:155] [PC > STB] FT_LED ENABLE LED3
+
+[11:16:19:185] [PC < STB] FT_LED ENABLE LED3
+                           
+
+[11:16:20:574] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           TT> 
+
+[11:16:20:584] [PC > STB] FT_USB_CheckDevices
+
+[11:16:20:624] [PC < STB] FT_USB_CheckDevices
+                           
+
+[11:16:20:704] [PC < STB] [SAGEMTESTS] Number of USB Host we want to detect : 1 
+                           [SAGEMTESTS] USB Check on Host : 1 new device detected
+                           [SAGEMTESTS] => FT_USB_CheckDevices - PASSED <= 
+                           TT> 
+
+[11:16:20:704] USB detected
+
+[11:16:20:804] ==============> NAND FLASH TEST <=========================================================
+
+[11:16:20:914] [PC > STB] NAND_Id
+
+[11:16:20:984] [PC < STB] NAND_Id
+                           [SAGEMTESTS] Name		: DG4008
+                           [SAGEMTESTS] Type		: MMC
+                           [SAGEMTESTS] Manufacturer ID	: 0x000045
+                           [SAGEMTESTS] Serial Number	: 0xa6661b29
+                           [SAGEMTESTS] Block Size		: 512
+                           [SAGEMTESTS] Block Count	: 13880960
+                           [SAGEMTESTS] Total Size		: 6.62 GB (7107051520 B)
+                           [SAGEMTESTS] => NAND_Id - PASSED <= 
+                           TT> 
+
+[11:16:20:984] Flash Nand ID : 0x000045
+
+[11:16:21:044] 6.62 
+[11:16:21:094] The NAND size is Conform 
+[11:16:21:154] ==============> TEST BOUTON MUTE <========================================================
+
+[11:16:21:304] [PC > STB] FT_AUDIO_TEST_MICS_LED 100
+
+[11:16:21:324] [PC < STB] FT_AUDIO_TEST_MICS_LED 100
+                           
+
+[11:16:27:921] [PC < STB] Recording WAVE '/tmp/audio.wav' : Signed 32 bit Little Endian, Rate 48000 Hz, Channels 4
+                           
+
+[11:16:31:599] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           [SAGEMTESTS] Mics are not connected or Mode Mute is activated
+                           [SAGEMTESTS] => FT_AUDIO_TEST_MICS_LED - PASSED <= 
+                           TT> 
+
+[11:16:31:619]  BOUTON MUTE OK 
+
+[11:16:31:709] ==============> TEST BOUTON MUTE OFF <====================================================
+
+[11:16:33:867] [PC > STB] FT_AUDIO_TEST_MICS_LED 100
+
+[11:16:33:887] [PC < STB] FT_AUDIO_TEST_MICS_LED 100
+                           
+
+[11:16:40:594] [PC < STB] Recording WAVE '/tmp/audio.wav' : Signed 32 bit Little Endian, Rate 48000 Hz, Channels 4
+                           
+
+[11:16:44:052] [PC < STB] [SAGEMTESTS] Mics are connected
+                           
+
+[11:16:44:072]  BOUTON MUTE OK 
+
+[11:16:44:162] ==============> BUTTONS TEST <============================================================
+
+[11:16:44:272] [PC > STB] FT_DetectSwitches ENABLE
+
+[11:16:44:302] [PC < STB] FT_DetectSwitches ENABLE
+                           
+
+[11:16:45:371] [PC < STB] [SAGEMTESTS] => FT_LED - PASSED <= 
+                           [SAGEMTESTS] => FT_AUDIO_TEST_MICS_LED - PASSED <= 
+                           TT> FT_DetectSwitches ENABLE
+                           
+
+[11:16:45:501] [PC < STB] [SAGEMTESTS] Start Detection of Switches
+                           [SAGEMTESTS] => FT_DetectSwitches - PASSED <= 
+                           TT> 
+
+[11:16:45:621] [PC < STB] killall: evtest: no process killed
+                           
+
+[11:16:46:481] [PC < STB] [SAGEMTESTS] switch 116 pressed
+                           
+
+[11:16:46:671] [PC < STB] [SAGEMTESTS] switch 116 released
+                           
+
+[11:16:47:201] [PC < STB] [SAGEMTESTS] switch 148 pressed
+                           
+
+[11:16:47:280] [PC < STB] [SAGEMTESTS] switch 148 released
+                           
+
+[11:16:47:320] ==============> CHIPSET TEMPERATURE TEST <================================================
+
+[11:16:47:440] [PC > STB] FT_CPU_CheckTemperature 80
+
+[11:16:47:470] [PC < STB] FT_CPU_CheckTemperature 80
+                           
+
+[11:16:47:550] [PC < STB] [SAGEMTESTS] Current CPU temperature is 47 degrees C
+                           [SAGEMTESTS] => FT_CPU_CheckTemperature - PASSED <= 
+                           TT> 
+
+[11:16:47:620] End of functionnal thread
+
+[11:16:47:760] THREAD INFO : Threads Closed with Exit Code : -1 - 1 - 0
+
+[11:16:47:840] ==============> GENERATION DE FICHIERS BINAIRES <=========================================
+
+[11:16:49:239] Génération fichiers cles OK
+[11:16:49:329] ==============> SERIALISATION STB <=======================================================
+
+[11:16:49:439] ==============> Writing SN Sagem
+
+[11:16:49:489] [PC > STB] FLASH_Write SFIN_SN 923276002903
+
+[11:16:49:539] [PC < STB] FLASH_Write SFIN_SN 923276002903
+                           [SAGEMTESTS] SFIN_SN = 923276002903
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:579] ==============> Ecriture sn client Claro
+
+[11:16:49:629] [PC > STB] FLASH_Write CUSTOMER_SN 833184927001382
+
+[11:16:49:679] [PC < STB] FLASH_Write CUSTOMER_SN 833184927001382
+                           [SAGEMTESTS] CUSTOMER_SN = 833184927001382
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:719] ==============> Writing keys
+
+[11:16:49:769] Writing key adressesmac
+
+[11:16:49:819] [PC > STB] FLASH_Write MAC_ADDRESS 880FA29F5452
+
+[11:16:49:859] [PC < STB] FLASH_Write MAC_ADDRESS 880FA29F5452
+                           [SAGEMTESTS] MAC_ADDRESS = 880fa29f5452
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:859] [PC > STB] FLASH_Read MAC_ADDRESS
+
+[11:16:49:899] [PC < STB] FLASH_Read MAC_ADDRESS
+                           [SAGEMTESTS] MAC_ADDRESS = 880fa29f5452
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:49:899] [PC > STB] FLASH_Write MAC_ADDRESS1 880FA29F5453
+
+[11:16:49:949] [PC < STB] FLASH_Write MAC_ADDRESS1 880FA29F5453
+                           [SAGEMTESTS] MAC_ADDRESS1 = 880fa29f5453
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:49:949] [PC > STB] FLASH_Read MAC_ADDRESS1
+
+[11:16:49:999] [PC < STB] FLASH_Read MAC_ADDRESS1
+                           [SAGEMTESTS] MAC_ADDRESS1 = 880fa29f5453
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:49:999] [PC > STB] FLASH_Write MAC_ADDRESS2 880FA29F5454
+
+[11:16:50:049] [PC < STB] FLASH_Write MAC_ADDRESS2 880FA29F5454
+                           [SAGEMTESTS] MAC_ADDRESS2 = 880fa29f5454
+                           [SAGEMTESTS] => FLASH_Write - PASSED <= 
+                           TT> 
+
+[11:16:50:049] [PC > STB] FLASH_Read MAC_ADDRESS2
+
+[11:16:50:099] [PC < STB] FLASH_Read MAC_ADDRESS2
+                           [SAGEMTESTS] MAC_ADDRESS2 = 880fa29f5454
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:50:099] End writing adressesmac : OK
+
+[11:16:50:219] Writing key pk_nasc_3_nagra
+
+[11:16:50:269] End writing pk_nasc_3_nagra : OK
+
+[11:16:50:379] Writing key cles_sans_argument
+
+[11:16:50:439] [PC > STB] FUSE_GetStates_RAW 1 0x00000001 0x00000001
+
+[11:16:50:489] [PC < STB] FUSE_GetStates_RAW 1 0x00000001 0x00000001
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 1)
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 1) - subfuse[0]=0x00000001 matches expected value
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 1) - State : OK -  ACTIVATED
+                           
+
+[11:16:50:499] [PC > STB] FUSE_GetStates_RAW 7 0x00000001 0x00000001
+
+[11:16:50:529] [PC < STB] FUSE_GetStates_RAW 7 0x00000001 0x00000001
+                           
+
+[11:16:50:699] [PC < STB] [SAGEMTESTS] => FUSE_GetStates_RAW - PASSED <= 
+                           TT> FUSE_GetStates_RAW 7 0x00000001 0x00000001
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 7)
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 7) - subfuse[0]=0x00000001 matches expected value
+                           [SAGEMTESTS] Getting fuse_Get_state (Fuse Name = 7) - State : OK -  ACTIVATED
+                           
+
+[11:16:50:709] End writing cles_sans_argument : OK
+
+[11:16:50:819] [PC > STB] FLASH_Read CIE_SN
+
+[11:16:50:849] [PC < STB] FLASH_Read CIE_SN
+                           
+
+[11:16:50:909] [PC < STB] [SAGEMTESTS] => FUSE_GetStates_RAW - PASSED <= 
+                           TT> FLASH_Read CIE_SN
+                           [SAGEMTESTS] CIE_SN = 61903137006411
+                           [SAGEMTESTS] => FLASH_Read - PASSED <= 
+                           TT> 
+
+[11:16:50:909] ==============> Start: properties update
+
+[11:16:50:969] ==============> End: properties update
+
+[11:16:51:019] ==============> Uniqueness violation filter
+
+[11:16:51:208] [PC > STB] SWITCH_TO_BP3
+
+[11:16:51:228] [PC < STB] SWITCH_TO_BP3
+                           
+
+[11:16:51:718] [PC < STB] [SAGEMTESTS] => SWITCH_TO_BP3 - PASSED <= 
+                           TT> 
+
+[11:16:51:728] [PC > STB] sync
+
+[11:16:51:768] [PC < STB] sync
+                           TT> 
+
+[11:16:51:768] Writing informations in flash OK
+
+[11:16:51:848] ==============> DB TRACKING <=============================================================
+
+[11:16:52:608] Tracking OK
+
+[11:16:52:698] ==============> PRINTING LABEL <==========================================================
+
+[11:16:52:978] ===================> END OF TEST <========================================================
+
+[11:16:52:978] ############ TESTS OK ############
+
+[11:16:52:978] TEST LENGTH : 41734 ms
+
+[11:16:52:978] SOFT VERSION : S14004AA48_0
+
+[11:16:52:978] SLOT STB COUNT : 7
+
+[11:16:52:988] <CIE>  Name                               : CIE DCIW377V Claro RUN1 Equipé
+               <CIE>  Reference                          : 254047262
+               <CIE>  Index                              : A01
+               <SFIN> Name                               : Dec. Assemblé DCIW377V Claro
+               <SFIN> Reference                          : 254030639
+               <SFIN> Index                              : A01
+               <PFIN> Reference                          : 254030671
+               <PFIN> Index                              : A01
+               
+[11:16:52:988] Sn SFIN                                   : 923276002903
+               ID Sn SFIN                                : 48976177
+               Sn CIE                                    : 61903137006411
+               CIE Version                               : 254047262
+               CIE Index                                 : A1
+               Movement ID test CIE                      : 345469742
+               Authorization code                        : 1
+               Error label                               : Aucune script de logo récupéré.
+               
+[11:16:52:988] etat_DEC_BTF_sTestDate                           : 03/07/2023 11:16:52
+               etat_DEC_BTF_sTermTechVersion                    : TT_F_M377_CLARO
+               etat_DEC_BTF_iNumCentre                          : 9
+               etat_DEC_BTF_iNumSlot                            : 0
+               etat_DEC_BTF_iDureeManipOperateur                : 1938
+               etat_DEC_BTF_sCaStbId                            : 426DC623
+               etat_DEC_BTF_sIdFlashNand                        : 0x000045
+               etat_DEC_BTF_sMacAdresse                         : 880FA29F5452
+               etat_DEC_BTF_sMacAdresse2                        : 880FA29F5453
+               etat_DEC_BTF_sMacAdresse3                        : 880FA29F5454
+               etat_DEC_BTF_sCasId                              : 3078383931393946373400
+               etat_DEC_BTF_sDecCasIdPlusCle                    : 230015781226
+               etat_DEC_BTF_sClientSn                           : 833184927001382
+               etat_DEC_BTF_sChipsetSnKEYA                      : 060084d942c4adcc
+               etat_DEC_BTF_sChipsetSnKEYC                      : c26dc623
+               
+[11:16:52:988] 
+[11:16:52:988] Mesure <BTF_bLeds>                        : Mesure Leds - Status 2
+               Mesure <BTF_fLed1>                        : Mesure LED1 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_fLed2>                        : Mesure LED2 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_fLed3>                        : Mesure LED3 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_fLed4>                        : Mesure LED4 BTF - Status 2
+                                                           70.000000  < ... < 255.000000 
+               Mesure <BTF_bSmartCard>                   : Resultat du test de la SmartCard - Status 2
+               Mesure <BTF_bUsb>                         : Resultat du test de l'USB - Status 0
+                                                           Duree 9156 ms
+               Mesure <BTF_bSDCard>                      : Resultat du test de la SD Card - Status 2
+               Mesure <BTF_bIr>                          : Resultat du test de l'infrarouge - Status 2
+               Mesure <BTF_bBoutons>                     : Resultat du test des boutons - Status 0
+                                                           Duree 3047 ms
+               Mesure <BTF_bPatinsVis>                   : Resultat du test des patins et des vis - Status 2
+               Mesure <BTF_bHdd>                         : Resultat du test HDD - Status 2
+               Mesure <BTF_bFlashNor>                    : Pour Test flash Nor - Status 2
+               Mesure <BTF_bFlashNand>                   : Resultat du test de la Flash Nand - Status 0
+                                                           Duree 250 ms
+               Mesure <BTF_fTempChipset>                 : Valeur de la température du Chipset - Status 0
+                                                           20.000000 °C < ... < 80.000000 °C
+                                                           47.000000 °C
+                                                           Duree 109 ms
+               Mesure <BTF_fLed1_R>                      : Mesure LED1 Rouge BTF - Status 2
+                                                           10.000000  < ... < 100.000000 
+               Mesure <BTF_fLed2_R>                      : Mesure LED2 Rouge BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed3_R>                      : Mesure LED3 Rouge BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed4_R>                      : Mesure LED4 Rouge BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed1_V>                      : Mesure LED1 Vert BTF - Status 2
+                                                           40.000000  < ... < 200.000000 
+               Mesure <BTF_fLed2_V>                      : Mesure LED2 Vert BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed3_V>                      : Mesure LED3 Vert BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed4_V>                      : Mesure LED4 Vert BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed1_B>                      : Mesure LED1 Blanc BTF - Status 2
+                                                           10.000000  < ... < 180.000000 
+               Mesure <BTF_fLed2_B>                      : Mesure LED2 Blanc BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed3_B>                      : Mesure LED3 Blanc BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed4_B>                      : Mesure LED4 Blanc BTF - Status 2
+                                                           10.000000  < ... < 200.000000 
+               Mesure <BTF_fLed1_I>                      : Mesure LED1 Intensité BTF - Status 2
+                                                           420.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed2_I>                      : Mesure LED2 Intensité BTF - Status 2
+                                                           500.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed3_I>                      : Mesure LED3 Intensité BTF - Status 2
+                                                           500.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed4_I>                      : Mesure LED4 Intensité BTF - Status 2
+                                                           500.000000  < ... < 5000.000000 
+               Mesure <BTF_fLed1_X>                      : Mesure LED1 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed2_X>                      : Mesure LED2 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed3_X>                      : Mesure LED3 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed4_X>                      : Mesure LED4 Abscice BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed1_Y>                      : Mesure LED1 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed2_Y>                      : Mesure LED2 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed3_Y>                      : Mesure LED3 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               Mesure <BTF_fLed4_Y>                      : Mesure LED4 Cordoné BTF - Status 2
+                                                           0.000000  < ... < 1.000000 
+               
+[11:16:53:567] ==============> WAITING FOR SET TOP BOX REMOVAL <=========================================
+
+[11:45:00:589] SET TOP BOX REMOVED FROM SLOT (TIME = 783807031)
+
+>>>>>>> 47e701e2e9eb4db4e39fce95825a06b55bf41631

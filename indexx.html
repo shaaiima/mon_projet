@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mots à vérifier</title>
+
+    <!-- Importation du style Bootstrap pour la mise en page -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Importation de Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- styles définis pour l'animation fade-in -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dde6f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            padding-top: 400px; /* Ajoutez un espace en haut du formulaire */
+            min-height: 70vh; /* Ajustez la valeur pour agrandir le conteneur */
+        }
+        
+        
+      .btn7 {
+        
+        background-color: #1073b5;
+        color: white;
+    }
+
+
+        /* Styles pour la LED rouge */
+        .led-red {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            margin-right: 5px;
+        }
+
+        /* Styles pour la LED verte */
+        .led-green {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: green;
+            margin-right: 5px;
+        }
+    </style>
+
+    <!-- Importation de jQuery pour faciliter la manipulation du DOM (document object model ) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Importation de SheetJS pour la gestion des fichiers Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    
+    <div class="form-container">
+    <div class="container">
+        <h1 class="mt-4">Mots à vérifier</h1>
+        <button class="btn btn-primary btn-orange" onclick="verifyAllWordsAndExport()">Vérifier et Exporter vers Excel</button>
+      
+        <button class="btn btn-primary btn-blue" onclick="displayICPContent()">Afficher le contenu de ICP</button>
+        <button class="btn7" onclick="allerVersPage2()">&rarr;</button>
+        
+
+        <div id="result" class="mt-3"></div>
+
+    </div>
+</div>
+    <!-- Script JavaScript pour la fonctionnalité de vérification de mot -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var wordsToCheck = [
+
+        { label: 'USB TEST', word: 'USB TEST' },
+        { label: 'VERIFYING AUTHORIZATION', word: 'VERIFYING AUTHORIZATION' },
+        { label: 'READING CHIPSET ID', word: 'READING CHIPSET ID' },
+        { label: 'GENERATING SERIALNUMBER', word: 'GENERATING SERIALNUMBER' },
+        { label: 'NAND FLASH TEST', word: 'NAND FLASH TEST' },
+        { label: 'TEST BOUTON MUTE', word: 'TEST BOUTON MUTE' },
+        { label: 'TEST BOUTON MUTE OFF', word: 'TEST BOUTON MUTE OFF' },      
+         { label: 'BUTTONS TEST', word: 'BUTTONS TEST' },
+        { label: 'CHIPSET TEMPERATURE TEST', word: 'CHIPSET TEMPERATURE TEST' },
+        { label: 'GENERATION DE FICHIERS BINAIRES', word: 'GENERATION DE FICHIERS BINAIRES' },
+        { label: 'SERIALISATION STB', word: 'SERIALISATION STB' },
+        { label: 'Writing SN Sagem', word: 'Writing SN Sagem' },
+        { label: 'Ecriture sn client Claro', word: 'Ecriture sn client Claro' },
+        { label: 'Writing keys', word: 'Writing keys' },
+        ]; 
+
+        var results = [];
+        function verifyAllWordsAndExport() {
+            var resultElement = $('#result');
+            resultElement.html('');
+
+            wordsToCheck.forEach(function (item) {
+                var isWordFound = checkWordInBFE(item.word);
+
+                var resultHtml = '<div class="alert fade-in" role="alert">';
+                resultHtml += '<strong>' + item.label + ': </strong>';
+
+                if (isWordFound) {
+                    resultHtml += '<span class="led-green"></span>';
+                } else {
+                    resultHtml += '<span class="led-red"></span>';
+                }
+
+                resultHtml += '</div>';
+
+                resultElement.append(resultHtml);
+
+                results.push({ Label: item.label, Word: item.word, Found: isWordFound ? 'Oui' : 'Non' });
+
+                if (results.length === wordsToCheck.length) {
+                    exportToExcel();
+                }
+            });
+        }
+
+        function checkWordInBFE(word) {
+            return fetch('BFE.txt')
+                .then(response => response.text())
+                .then(content => content.includes(word))
+                .catch(error => {
+                    console.error('Error:', error);
+                    return false;
+                });
+        }
+        function displayICPContent() {
+            // Vérifie si la fonctionnalité de FileReader est prise en charge par le navigateur
+            if (window.File && window.FileReader && window.FileList && window.Blob) {
+                // Récupère le fichier sélectionné par l'utilisateur (ici, ICP.txt)
+                var fileInput = document.createElement("input");
+                fileInput.type = "file";
+    
+                // Définit la fonction appelée lorsqu'un fichier est sélectionné
+                fileInput.onchange = function (event) {
+                    var file = event.target.files[0];
+                    var reader = new FileReader();
+    
+                    // Définit la fonction appelée lorsque le contenu du fichier est lu
+                    reader.onload = function (event) {
+                        var content = event.target.result;
+    
+                        // Affiche le contenu du fichier dans une boîte de dialogue d'alerte
+                        alert(content);
+                    };
+    
+                    // Lit le contenu du fichier
+                    reader.readAsText(file);
+                };
+    
+                // Déclenche le clic sur l'élément input créé pour ouvrir la fenêtre de sélection de fichier
+                fileInput.click();
+            } else {
+                alert("Désolé, votre navigateur ne prend pas en charge la fonctionnalité de FileReader.");
+            }
+        }
+        
+
+        function exportToExcel() {
+            /* Création du fichier Excel */
+            var wb = XLSX.utils.book_new();
+            var ws = XLSX.utils.json_to_sheet(results);
+
+            /* Ajout des en-têtes des colonnes */
+            var headers = ["Label ", "Word", "Found"];
+            XLSX.utils.sheet_add_aoa(ws, [headers], { origin: "A1" });
+
+            /* Définition de la mise en page */
+            var wscols = [
+                { wch: 50 },
+                { wch: 50 },
+                { wch: 20 }
+            ];
+            ws['!cols'] = wscols;
+
+            /* Ajout de la feuille au classeur */
+            XLSX.utils.book_append_sheet(wb, ws, "Résultats");
+
+            /* Sauvegarde du fichier */
+            XLSX.writeFile(wb, "resultats.xlsx");
+        }
+        function allerVersPage2() {
+            // Redirection vers la page page2.html
+            window.location.href = "indexx_BFE.html";
+        }
+
+        
+
+    </script>
+</body>
+</html>
